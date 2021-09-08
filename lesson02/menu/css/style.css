@@ -1,0 +1,61 @@
+.outer{
+    border:1px solid black;
+    padding: 20px;
+    position: relative;
+}
+
+.inner{
+    border:1px solid black;
+    margin: 20px;
+
+}
+.abs{
+    position: absolute;
+}
+.outer .inner{
+    background: cadetblue;
+
+}
+
+.outer:hover .inner{
+    background: chartreuse;
+    display: block;
+}
+
+.menu li{
+    list-style:none;
+    display: inline-block;
+    width: 70px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+.menu li a{
+ 
+}
+.menu li a:visited{
+    color:gray;
+}
+.menu li:hover{
+    background: gold;
+}
+.menu li:active{
+    background: gray;
+}
+.sub-menu{
+    position: absolute;
+    display: none;
+    left: -40px;
+}
+.sub-menu li{
+    width: 105px;
+    display: block;
+
+}
+.list-item{
+    position: relative;
+}
+.list-item:hover .sub-menu{
+    display: block;
+}
+

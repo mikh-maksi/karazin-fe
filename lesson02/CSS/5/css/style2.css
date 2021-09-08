@@ -1,0 +1,21 @@
+.p1{
+    color:cadetblue;
+}
+p{
+    color: greenyellow;
+}
+
+.p2{
+    text-indent: 30px;
+    background: cornflowerblue;
+    border: green 2px solid;
+    border-radius: 5px;
+    font-size:26px;
+}
+.text{
+    font-size:18px;
+    font-family: Verdana;
+}
+.text.p2{
+    font-size: 36px;
+}

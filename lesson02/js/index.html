@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #rocket{
+            position: absolute;
+            z-index: 3;
+        }
+        #check{
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <img src="./img/rocket.png" alt="" id = "rocket" >    
+    <img src="./img/check.png" alt="" id = "check" >
+
+
+    <button id = "b_up">Up</button>
+    <button id = "b_down">Down</button>
+    <button id = "b_left">Left</button>
+    <button id = "b_right">Right</button>
+
+    <script>
+
+        b_down.addEventListener("click",function(){
+            rocket.style.top = (parseInt(rocket.style.top) + 10)+"px"
+            checkpoint();
+        });
+        b_up.addEventListener("click",function(){
+            rocket.style.top = (parseInt(rocket.style.top) - 10)+"px"
+            checkpoint();
+        });
+        b_left.addEventListener("click",function(){
+          rocket.style.left = (parseInt(rocket.style.left) + 10)+"px"
+          checkpoint();
+      });
+        b_right.addEventListener("click",function(){
+          rocket.style.left = (parseInt(rocket.style.left) - 10)+"px"
+          checkpoint();
+      });
+        rocket.style.left = "100px";
+        rocket.style.top = "100px";
+        check.style.left = "200px";
+        check.style.top = "200px";
+        function checkpoint(){
+            console.log(rocket.style.top);
+            console.log(rocket.style.left);
+            if ((rocket.style.top == "200px") &&  (rocket.style.left == "200px")){
+                alert("You - win");
+            }
+        }
+    </script>
+</body>
+</html>

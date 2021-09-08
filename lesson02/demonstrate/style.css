@@ -1,0 +1,51 @@
+p{
+    font-size: 10px;
+}
+h1{
+    color:blue;
+}
+.myClass{
+/*Оформление текста*/
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: underline;
+    font-family: Verdana;
+    background-color: aquamarine;
+
+/*Отступы и границы*/
+    margin-right:40px;
+    padding-left:50px;
+    border: 1px dotted black;
+
+/*позиционирование*/
+
+
+
+
+
+
+}
+.d{
+    width: 50px;
+    background: burlywood;
+    border: 1px solid black;
+    display: inline-block;
+}
+
+.d1{
+    width: 200px;
+}
+.d2{
+    width: 800px;
+}
+
+.d3{
+    display: block;
+}
+
+.main{
+    text-align: center;
+}
+.alert{
+    color:red;
+}

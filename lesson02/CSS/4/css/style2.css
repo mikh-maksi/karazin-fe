@@ -1,0 +1,6 @@
+ul li{
+    list-style: symbols(cyclic "*" "†" "‡");
+}
+ol {
+    list-style: symbols(cyclic "*" "†" "‡");
+  }
