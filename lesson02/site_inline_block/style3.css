@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.logo{
+    display: inline-block;
+}
+.title{
+    display: inline;
+    width:400px;
+    text-align: center;
+}
+.list li{
+    display: inline-block;
+}
+.left{
+    display: inline-block;
+    width: 20%;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.right{
+    margin-left:20px;
+    display: inline-block;
+    width:calc(80% - 4px - 40px);
+    vertical-align: top;
+}
+footer{
+    display: inline;
+    width: 400px;
+}
