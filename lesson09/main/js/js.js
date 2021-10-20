@@ -17,7 +17,20 @@ function render(n_q){
 
 function next(){
     current_question++;
-    render(current_question);
+
+    if (current_question<questions.length){
+        render(current_question);
+    }else{
+        questions_canvas.innerHTML = "Ваш результат: "+total_points+" баллов";
+    }
+    
+    
+    // if (current_question<questions.length){
+    //     render(current_question);
+    // } else{
+    //     questions_canvas.innerHTML = 'Ваш результат:'+total_points;
+    // }
+
 }
 
 function prev(){
