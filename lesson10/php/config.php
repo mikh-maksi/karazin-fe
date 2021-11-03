@@ -1,8 +1,8 @@
 <?php
 
-    $config["server"] = "localhost";
-    $config["login"] = "root";
-    $config["pass"] = "";
-    $config["db"] = "js8";
+    $config["server"] = "levelhst.mysql.tools";
+    $config["login"] = "levelhst_quiz";
+    $config["pass"] = "xx2V)H7+4e";
+    $config["db"] = "levelhst_quiz";
 
 ?>

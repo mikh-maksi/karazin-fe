@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="nm">Введите ваше имя</label><input type="text" id="nm" name="nm">
+    <label for="points">Введите количество баллов</label><input type="text" id="points" name="points">
+
+    <button id = "btn">Send</button>
+    
+    <script>
+
+    var obj= {};
+    async function f(ob) {
+            let response = fetch('http://innovations.kh.ua/goback/back/post.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json;charset=utf-8'
+                },
+                body: JSON.stringify(ob)
+            });
+            let resp = await response;
+            return resp;
+        }
+
+
+    function sndresFnc(){
+        obj.name = nm.value;
+        obj.points = points.value;
+        obj.quiz_id = 1;
+        let resp = f(obj);
+        console.log(resp);
+        console.log(obj);
+    }
+     sndresFnc();
+
+    
+    btn.addEventListener("click",sndresFnc);
+    </script>
+</body>
+</html>
