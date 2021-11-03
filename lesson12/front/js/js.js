@@ -37,18 +37,19 @@ next_question.addEventListener("click", f_next_question);
   }
   function f_next_question (){
     if (k<Number(n_question.value)-1){
-    console.log(k,Number(n_question.value));
-    right_div.classList.add("hidden");
-    answer.classList.add("hidden");
-    point = 1;
-    k+=1;
-    n_right.innerHTML=right_answer_n;
-    n.innerHTML=k+1;
-    answers(k);
+      console.log(k,Number(n_question.value));
+      right_div.classList.add("hidden");
+      answer.classList.add("hidden");
+      point = 1;
+      k+=1;
+      n_right.innerHTML=right_answer_n;
+      n.innerHTML=k+1;
+      answers(k);
     }else{
       n_right.innerHTML=right_answer_n;
-
       wrapper.innerHTML='';
+      div_points.classList.remove("hidden");
+      points.value = right_answer_n;
     }
   }
 

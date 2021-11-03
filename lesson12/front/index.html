@@ -29,11 +29,12 @@
     </div>
     <p>Номер вопроса: <span id="n"></span></p>
     <p>Количество правильных ответов: <span id="n_right"></span> (с первого раза).</p>
-    <label for="nm">Введите ваше имя</label><input type="text" id="nm" name="nm">
-    <label for="points">Введите количество баллов</label><input type="text" id="points" name="points">
+    <div id = "div_points" class="hidden">
+        <label for="nm">Введите ваше имя</label><input type="text" id="nm" name="nm">
+        <label for="points">Введите количество баллов</label><input type="text" id="points" name="points" readonly>
 
-    <button id = "btn">Send</button>
-    
+        <button id = "btn">Send</button>
+    </div>
     <input type="hidden" value = "0" id = "n_question">
     <script src="js/js.js"></script>
     <script>
@@ -57,8 +58,8 @@
             obj.points = points.value;
             obj.quiz_id = 1;
             let resp = f(obj);
-            console.log(resp);
-            console.log(obj);
+            // console.log(resp);
+            // console.log(obj);
         }
          sndresFnc();
     
