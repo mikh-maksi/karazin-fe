@@ -148,6 +148,104 @@
 <img src = "img/image08.png">  
 
 ## Тематический сайт (inline-blocks)
+|№|Задание|Код|Скриншот|
+|---|---|---|---|
+|2|1. Создайте сайт, используя свойство display:inline-block|<a href = "https://github.com/mikh-maksi/karazin-fe/tree/main/simple-way#html">Код страницы</a>|<img src = "img/site.jpg" width = "300">|
+
+
+### inline-block
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+    <link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="logo"><img src="img/idea.png" alt="Логотип"></div>
+            <div class="title">Наши идеи изменят мир</div>
+        </header>
+        <nav>
+            <ul class = "list">
+                <li><a href="https://www.google.com/">item1</a></li>
+                <li><a href="index2.html">item2</a></li>
+                <li><a href="https://karazin.ua/">item3</a></li>
+                <li><a href="http://www.cyber.kharkov.ua/">item4</a></li>
+                <li><a href="https://city.kharkov.ua/">item5</a></li>
+                <li><a href="index6.html">item6</a></li>
+            </ul>
+        </nav>
+        <main>
+            <aside class="left">
+Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam maxime amet, necessitatibus accusamus commodi minus itaque perferendis. Deleniti temporibus itaque sunt culpa eveniet quaerat possimus neque, qui placeat voluptas! Veritatis.
+            </aside>
+            <article class="right">
+                <h2>Index 6</h2>
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum, aut tempore quo voluptatem consequuntur dolorum illo aspernatur qui rerum temporibus ullam ipsam libero officiis ipsa maiores corporis id consectetur. Cumque.
+            </article>
+        </main>
+        <footer>Все права защищены</footer>
+
+    </div>
+</body>
+</html>
+```
+```css
+.logo{
+    display: inline-block;
+    vertical-align: middle;
+    height: 128px;
+}
+.title{
+    display: inline-block;
+    vertical-align: middle;
+    font-family: 'Bad Script', cursive;
+    font-size: 36px;
+
+}
+.list{
+    background: cyan;
+    line-height: 25px;
+}
+.list li{
+    list-style: none;
+    display:inline-block;
+    text-align:center;
+
+}
+.list li a{
+    display:inline-block;
+    width: 50px;
+    text-decoration: none;
+    border: 1px solid transparent;
+    color:black;
+}
+.list li a:hover{
+    text-decoration: underline;
+    border: 1px solid;
+}
+
+.left{
+    display: inline-block;
+    width: 20%;
+}
+.right{
+    vertical-align: top;
+    display: inline-block;
+    width: calc(80% - 4px);
+}
+footer{
+    text-align: center;
+    background: cyan;
+}
+```
+
 ## Flexfroggy
 ## Тематический сайт (flexbox)
 ## Калькулятор
