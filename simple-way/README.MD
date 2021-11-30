@@ -88,6 +88,65 @@
 ```
 
 ## Вставка текста на GitHub Pages
+Создание репозитария
+
+1. Заходим на **github.com** (если не зарегистрированы - зарегистрироваться)
+<img src = "img/image14.png">  
+<img src = "img/image15.png">  
+
+2. Создаем новый репозитарий
+<img src = "img/image19.png">
+
+3. Или используем существующий
+
+<img src = "img/image02.png">
+
+4. Нажимаем кнопку **"clone or download"**
+
+<img src = "img/image03.png">
+
+5. Создаем новую папку и в ней на пустом месте нажимаем правую клавиши мыши, выбираем **gitBush Here** (если программа не установлена - скачать: https://git-scm.com/download/ )
+
+<img src = "img/image04.png">
+
+6. В открывшемся окне пишем   и нажимаем комбинацию клавиш **Shift+INS**
+  
+<img src = "img/image12.png">  
+
+Или нажимаем правой клавишей мыши после набранного Вводим команду **git push** (возможно - нужно будет указать логин и пароль к git hub) и выбираем "Вставить" (Paste)  
+
+<img src = "img/image07.png">
+
+7. Нажимаем **"Enter"**  
+
+<img src = "img/image10.png">  
+
+8. Теперь в нашей созданной папке появилась новая под папка с названием таким же как название репозитария (в нашем случае **newrepo**)  
+<img src = "img/image17.png">  
+
+9.  Заходим в папку, создаем сайт (файлы **index.html**, **style.css**, картинки, шрифты, др.)
+<img src = "img/image09.png">  
+<img src = "img/image11.png"> 
+
+10. Создаем необходимые файлы  
+<img src = "img/image06.png">  
+<img src = "img/image05.png">  
+11. Переходим в проводник и нажимаем правой клавишей на пустом месте и выбираем gitbush Here
+<img src = "img/image01.png">  
+
+
+В открывшимся окне пишем **git add .**  
+
+<img src = "img/image16.png">  
+
+12. Далее - вводим команду **git commit -m "first commit"**
+
+<img src = "img/image13.png">  
+
+13. Вводим команду git push (возможно - нужно будет указать логин и пароль к git hub)
+
+<img src = "img/image08.png">  
+
 ## Тематический сайт (inline-blocks)
 ## Flexfroggy
 ## Тематический сайт (flexbox)
