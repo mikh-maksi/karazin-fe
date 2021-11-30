@@ -9,7 +9,7 @@
 
 |№|Альтернативные задания|Код|Скриншот|
 |---|---|---|---|
-|1|1. Создайте страницу с тегами i,b,img,p,a| |<img src = "img/html.jpg" width = 300>|
+|1|1. Создайте страницу с тегами i,b,img,p,a|<a href = "https://github.com/mikh-maksi/karazin-fe/tree/main/simple-way#html">Код страницы</a>|<img src = "img/html.jpg" width = 300>|
 
 ## HTML
 ```html
