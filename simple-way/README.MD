@@ -255,7 +255,7 @@ footer{
 
 |№|Задание|Код|Скриншот|
 |---|---|---|---|
-|4|1. Сверстать рассписание своей группы<br>2. Сверастать страницу с фотографиями преподавателей своей кафедры (<a href = "http://www.cyber.kharkov.ua/page-teachers.html">пример</a>) |<a href = "https://github.com/mikh-maksi/karazin-fe/tree/main/simple-way#Timetable">Код страницы</a|<img src = "img/timetable.jpg">|
+|4|1. Сверстать рассписание своей группы<br>2. Сверастать страницу с фотографиями преподавателей своей кафедры (<a href = "http://www.cyber.kharkov.ua/page-teachers.html">пример</a>) |<a href = "https://github.com/mikh-maksi/karazin-fe/tree/main/simple-way#Timetable">Код страницы</a>|<img src = "img/timetable.jpg">|
 ### Timetable
 ```html
 <!DOCTYPE html>
@@ -521,7 +521,9 @@ footer{
 }
 ```
 ## Калькулятор
-
+|№|Задание|Код|Скриншот|
+|---|---|---|---|
+|5|1. Реализуйте расчетный калькулятор <br> 2. Добавьте к калькулятору основы теории<br> 3. Реализуйте в калькуляторе значения по-умолчанию (с помощью placeholder)<br>4. Добавьте 5 условий задач, которые решаются с помощью калькулятора|<a href = "https://github.com/mikh-maksi/karazin-fe/tree/main/simple-way#Calculator">Код страницы</a>|<img src = "img/calculator.jpg" width = 300>|
 
 ### Calculator
 ```html
@@ -634,9 +636,361 @@ btn.addEventListener("click",f_out);
 
 ## Ответ на 1 вопрос
 
+|№|Задание|Код|Скриншот|
+|---|---|---|---|
+|6|1. Создайте тест с 4 вариантом ответа, при правильном ответе на вопрос выдается сообщение. <br> 2. Реализуйте вариант теста с текстом|<a href = "https://github.com/mikh-maksi/karazin-fe/tree/main/simple-way#quiz">Код страницы</a>|<img src = "img/flags.jpg">|
+### qiuz
+**HTML**
+```html
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1 class="title"> Флаги мира </h1>
 
+  <h3 class="quest"> Какой из предложенных флагов является флагом Грузии?</h3>
+    <div class="img">
+        <div class="item">
+            <img  src="img/f1.jpg" alt="flag 1">
+            <p> 1 </p>
+        </div>
+        <div class="item">
+            <img src="img/f2.jpg" alt="flag 1">
+            <p> 2 </p>
+        </div>
+        <div class="item">
+            <img  src="img/f3.jpg" alt="flag 1">
+            <p> 3 </p>
+        </div>
+        <div class="item">
+            <img src="img/f4.jpg" alt="flag 1">
+            <p> 4 </p>
+        </div>
+    </div>
+<div class="input-style">
+    <p> <input type="radio"  name="color" id="f1" > 1</p>
+    <p> <input type="radio"  name="color" id="f2" > 2 </p>
+    <p> <input  type="radio"  name="color" id="f3" > 3 </p>
+    <p> <input  type="radio"  name="color" id="f4" > 4 </p>
+</div>
+    <button id = "btn" class="answ"> Ответить </button>
+
+    <div class="right_answ">
+    <p class="right hdn" id="right">Правильный ответ</p>
+    </div>
+
+    <div class="wrong hdn" id="wrong">
+        <div class="wrong-content">
+            <p class="wrong1" id="wrong1">Неправильный ответ</p>
+        </div>
+
+        <button class="answ2" id = "btn1">Посмотреть ответ</button>
+    </div>
+    <p class="correct hdn" id="answer" > 1 </p>
+</div>
+<script src="js.js"></script>
+
+</body>
+</html>
+```
+**CSS**
+```css
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+   text-align: center;
+   margin-bottom: 20px;
+}
+.container {
+    font-family: 'Shippori Mincho', serif;
+    width: 1200px;
+    border-radius: 3%;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    background: darkseagreen;
+}
+h3 {
+    font-size: 25px;
+    padding-bottom: 45px;
+}
+.title {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.img {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+}
+img {
+    width: 200px;
+    height: 100px;
+}
+.item p {
+    font-size: 30px;
+    color: deeppink;
+}
+input {
+    margin: 0;
+}
+.input-style {
+    justify-content: center;
+    display: flex;
+}
+.input-style p {
+    margin-right: 20px;
+}
+.answ, .answ2 {
+
+    font-size: 17px;
+    cursor: pointer;
+    background: lemonchiffon;
+    border-radius: 10%;
+    font-weight: bold;
+    height: 30px;
+}
+.answ {
+    width: 100px;
+}
+.answ2 {
+    width: 180px;
+    margin: 0;
+}
+.right{
+    background-color: rgba(0, 200, 0, 0.5);
+}
+.wrong1 {
+     background-color: rgb(255, 44, 55);
+ }
+.right_answ,
+.wrong-content {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+.right,
+.wrong1{
+    padding-bottom: 5px;
+    font-size: 20px;
+    width: 300px;
+    align-content: center;
+    border-radius: 5px;
+}
+
+.hdn{
+padding-bottom: 20px;
+font-size: 22px;
+display: none;
+}
+
+.opend{
+background-color: skyblue;
+}
+.correct {
+    font-size: 20px;
+    padding-bottom: 20px;
+    margin-top: -17px;
+}
+```
+```js
+btn.addEventListener("click", f_out);
+btn1.addEventListener("click", f_out1);
+function f_out (){
+    console.log(f1.checked);
+    console.log(f2.checked);
+    console.log(f3.checked);
+    console.log(f4.checked);
+
+    if (f1.checked){
+        right.classList.remove("hdn");
+        wrong.classList.add("hdn");
+        alert("Სწორი პასუხი (Ответ верный!)");
+    }else{
+        right.classList.add("hdn");
+        wrong.classList.remove("hdn");
+        alert("მეტი იფიქრე (Подумай еще!)");
+    }
+
+}
+function f_out1 (){
+    answer.classList.toggle("hdn");
+    btn1.classList.toggle("opend");
+}
+
+```
+<img src = "img/f1.jpg" width = 200> <img src = "img/f2.jpg" width = 200> <img src = "img/f3.jpg" width = 200> <img src = "img/f4.jpg" width = 200> 
 
 ## Ответ на несколько вопросов
+|№|Задание|Код|Скриншот|
+|---|---|---|---|
+|7|1. Создайте тест из 5 вопросов с использованием массива |<a href = "https://github.com/mikh-maksi/karazin-fe/tree/main/simple-way#ArrayQuiz">Код страницы</a>|<img src = "img/quizarray.gif">|
+### ArrayQuiz
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital@1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <h2 class="header">Тест по макроэкономике</h2>
+        <p id="question"></p>
+        <p><input type="radio" name="variant" id="y1"><span  id = "a1"></span></p>
+        <p><input type="radio" name="variant" id="y2"><span  id = "a2"></span></p>
+        <p><input type="radio" name="variant" id="y3"><span  id = "a3"></span></p>
+        <p><input type="radio" name="variant" id="y4"><span  id = "a4"></span></p>
+
+        <button id = "btn">Дать ответ</button>
+    <div class="right_div hidden" id = "right_div">
+        <p class="right" id="right">Правильный ответ</p>
+        <button id = "btn2">Следующий вопрос</button>
+    </div>
+    <div class="wrong_div hidden" id="wrong_div">
+        <p class="wrong" id="wrong">Неправильный ответ</p>
+        <button id = "btn1">Посмотреть ответ</button>
+        <p id="answer" class = "hidden"></p>
+    </div>
+
+    
+    </div>
+    <input type="hidden" value = "0" id = "n_question">
+    
+    <script src="js.js"></script>
+</body>
+</html>
+```
+```css
+.wrapper{
+    margin:0 auto;
+    width:900px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Balsamiq Sans', cursive;
+    font-family: 'Train One', cursive;
+    background-color: lightgoldenrodyellow;
+    border-radius: 10px;
+}
+.header{
+    text-decoration: underline;
+    text-align: center;
+}
+.right{
+    background-color: rgba(0, 200, 0, 0.5);
+    border-radius: 5px;
+    padding-left:5px;
+}
+.wrong{
+    background-color: rgb(255, 44, 55);
+    border-radius: 5px;
+    padding-left:5px;
+}
+.hidden{
+    display: none;
+}
+#btn1{
+    background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+}
+.opend{
+    background-color: skyblue;
+}
+```
+
+```js
+let question_arr = ["Согласно закону Оукэна, двухпроцентное превышение фактического уровня безработицы над его естественным уровнем означает, что отставание фактического объема ВВП от реального составляет:","Инфляция издержек развивается при:","Кривая, показывающая связь между уровнем безработицы и годовым темпом, роста цен — это:","Государственный долг—это:","Фискальная политика может быть:"]
+let a1_arr = ["2%","умеренном росте объемов денежной массы","кривая Лоренца","задолженность населения, фирм, банков и зарубежных государств передправительством данной страны","стимулирующей"]
+let a2_arr = ["4%","росте цен на ресурсы","кривая Лаффера"," задолженность правительства перед населением страны","сдерживающей"]
+let a3_arr = ["3%","росте цен на потребительские товары и услуги","кривая Филлипса","задолженность правительства данной страны перед иностранными государствами","автоматической"]
+let a4_arr = ["5%","снижении учетной ставки"," кривая спроса","задолженность правительства перед всеми хозяйствующими субъектами как данной страны, так и зарубежных стран","все ответы верны"]
+let answer_arr = ["5%","росте цен на ресурсы","кривая Филлипса","задолженность правительства перед всеми хозяйствующими субъектами как данной страны, так и зарубежных стран","все ответы верны"]
+let n_right_answer_arr = [4,2,3,4,4]
+let n_right_answer = 1;
+let right_answers = 0;
+let n_answer = 4;
+
+question.innerHTML=question_arr[n_question.value];
+a1.innerHTML = a1_arr[n_question.value];
+a2.innerHTML = a2_arr[n_question.value];
+a3.innerHTML = a3_arr[n_question.value];
+a4.innerHTML = a4_arr[n_question.value];
+answer.innerHTML = answer_arr[n_question.value];
+
+n_right_answer = n_right_answer_arr[n_question.value];
+console.log(n_question.value)
+btn.addEventListener("click", f_out);
+btn1.addEventListener("click", f_out1);
+btn2.addEventListener("click", f_out2);
+  function f_out (){
+        console.log(y1.checked);
+        console.log(y2.checked);
+        console.log(y3.checked);
+        console.log(y4.checked);
+
+        if (y1.checked){ n_a = 1;}
+        if (y2.checked){ n_a = 2;}
+        if (y3.checked){ n_a = 3;}
+        if (y4.checked){ n_a = 4;}
+        console.log(n_a);
+        
+        if (n_a == n_right_answer){
+        right_answers += 1;
+        right_div.classList.remove("hidden");
+        wrong_div.classList.add("hidden");
+        console.log("n_question.value = "+n_question.value);
+        console.log("n_answer = "+n_answer);
+        if (n_question.value == n_answer){
+            btn2.classList.add("hidden");
+            let el1 = document.createElement("p");
+            el1.innerHTML = "<b>"+right_answers+"</b>";
+            right_div.appendChild(el1);
+        }
+        }
+        else{
+        right_answers-=1;
+        right_div.classList.add("hidden");
+        wrong_div.classList.remove("hidden");
+        }
+  }
+  function f_out1 (){
+    answer.classList.toggle("hidden");
+    btn1.classList.toggle("opend");
+  }
+  function f_out2 (){
+    right_div.classList.add("hidden");
+    k = Number(n_question.value);
+    k+=1;
+    n_question.value = k;
+    console.log(n_question)
+    question.innerHTML=question_arr[n_question.value];
+    a1.innerHTML = a1_arr[n_question.value];
+    a2.innerHTML = a2_arr[n_question.value];
+    a3.innerHTML = a3_arr[n_question.value];
+    a4.innerHTML = a4_arr[n_question.value];
+    answer.innerHTML = answer_arr[n_question.value];
+    
+    n_right_answer =n_right_answer_arr[n_question.value];
+    
+  }
+```
+
+
 ## Ответ на несколько вопросов (используем объект)
 ## Получение для вопросов данных с сервера
 ## Наполнение БД (MySQL)
