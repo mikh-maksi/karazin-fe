@@ -247,10 +247,395 @@ footer{
 ```
 
 ## Flexfroggy
+|№|Задание|Код|Скриншот|
+|---|---|---|---|
+|3|1. Пройти задания на сайте <a href ="https://flexboxfroggy.com/#ru">FlexFroggy</a><br>2. Пройти задания на сайте <a href ="https://flukeout.github.io/">CSS Diner</a><br>3. Пройти задания на сайте <a href ="http://www.flexboxdefense.com/">FlexBox Defence</a>|---|<img src = "img/flexfroggy.jpg" width = 300>|
+
 ## Тематический сайт (flexbox)
+
+|№|Задание|Код|Скриншот|
+|---|---|---|---|
+|4|1. Сверстать рассписание своей группы<br>2. Сверастать страницу с фотографиями преподавателей своей кафедры (<a href = "http://www.cyber.kharkov.ua/page-teachers.html">пример</a>) |<a href = "https://github.com/mikh-maksi/karazin-fe/tree/main/simple-way#Timetable">Код страницы</a|<img src = "img/timetable.jpg">|
+### Timetable
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="upper">
+                <img src="img/logo.png" alt="">
+            <nav class="menu">
+                <ul>
+                    <li><a href="">Создать рассписание </a></li>
+                    <li><a href="">Выбрать группу </a></li>
+                    <li><a href="">Рассписание преподавателя </a></li>
+                    <li><a href="">О сайте </a></li>
+                </ul>
+            </nav>
+            </div>
+        </header>
+        <main>
+            <div class="mainup">
+                <div class="line"></div>
+                <div class="groupname">МП-21</div>
+                <div class="line2"></div>
+            </div>
+            <div class="timetable">
+                <div class="s0">
+                    <div class="l1"></div>
+                    <div class="l2">Пн</div>
+                    <div class="l3">Вт</div>
+                    <div class="l4">Ср</div>
+                    <div class="l5">Чт</div>
+                    <div class="l6">Пт</div>
+                    <div class="l7">Сб</div>
+                    <div class="l8">Вс</div>
+                </div>
+                <div class="s1">
+                    <div class="l1">8:30 - 9:50</div>
+                    <div class="l2">Лин. Алгебра</div>
+                    <div class="l3">-</div>
+                    <div class="l4">Лин. Алгебра</div>
+                    <div class="l5">-</div>
+                    <div class="l6">Топология</div>
+                    <div class="l7"></div>
+                    <div class="l8"></div>
+                </div>
+                <div class="s2">
+                    <div class="l1">10:10 - 11:30</div>
+                    <div class="l2 ">Мат. Анализ</div>
+                    <div class="l3">Алгоритмы и структуры данных</div>
+                    <div class="l4">Лин. Алгебра</div>
+                    <div class="l5">Мат. Анализ</div>
+                    <div class="l6">Топология</div>
+                    <div class="l7"></div>
+                    <div class="l8"></div>
+                </div>
+                <div class="s3">
+                    <div class="l1">12:00 - 13:20</div>
+                    <div class="l2">-</div>
+                    <div class="l3">Алгоритмы и структуры данных</div>
+                    <div class="l4">Анг.</div>
+                    <div class="l5">Мат. Анализ</div>
+                    <div class="l6">Межфак</div>
+                    <div class="l7"></div>
+                    <div class="l8"></div>
+                </div>
+                <div class="s4">
+                    <div class="l1">13:40 - 15:00</div>
+                    <div class="l2">Кураторский час</div>
+                    <div class="l3">Мат. Анализ</div>
+                    <div class="l4">-</div>
+                    <div class="l5">Англ</div>
+                    <div class="l6">-</div>
+                    <div class="l7"></div>
+                    <div class="l8"></div>
+                </div>
+                <div class="s5">
+                    <div class="l1">15:20 - 16:40</div>
+                    <div class="l2"></div>
+                    <div class="l3"></div>
+                    <div class="l4"></div>
+                    <div class="l5"></div>
+                    <div class="l6"></div>
+                    <div class="l7"></div>
+                    <div class="l8"></div>
+                </div>
+                <div class="s6">
+                    <div class="l1">17:00 - 18:20</div>
+                    <div class="l2"></div>
+                    <div class="l3"></div>
+                    <div class="l4"></div>
+                    <div class="l5"></div>
+                    <div class="l6"></div>
+                    <div class="l7"></div>
+                    <div class="l8"></div>
+                </div>
+                <div class="s7">
+                    <div class="l1"></div>
+                    <div class="l2"></div>
+                    <div class="l3"></div>
+                    <div class="l4"></div>
+                    <div class="l5"></div>
+                    <div class="l6"></div>
+                    <div class="l7"></div>
+                    <div class="l8"></div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="down">
+                <div class="fm1">
+                    <nav>
+                        <ul>
+                            <li><a href="">Выбрать группу</a></li>
+                            <li><a href="">Рассписание преподавателя</a></li>
+                            <li><a href="">Создать рассписание</a></li>
+                        </ul>
+                    </nav>
+                    
+                </div>
+                <div class="fm2">ХНУ им. В.Н.  Каразина</div>
+                <div class="fm3">Адреса: майдан Свободи 4, 61022, Харків<br>
+                    Приймальна комісія: +38 (057) 707-52-70<br>
+                    Довідкова, тел: +38 (057) 707-55-00<br>
+                    Факс: +38 (057) 705-02-41<br>
+                    E-mail: univer@karazin.ua<br>
+                    URL: //www.univer.kharkov.ua</div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
+```
+
+```css
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background: url('../img/pixel.png');
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+}
+header{
+    height:100px;
+    background-color: #822d2d;
+}
+footer{
+    height:100px;
+    background-color: #822d2d;    
+}
+.upper{
+    width:1200px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu ul{
+    display: flex;
+    width:900px;
+    justify-content: space-between;
+    align-items: center ;
+}
+.menu ul li{
+    list-style: none;
+}
+.menu ul li a{
+    color:white;
+    font-size:21px;
+    font-family: Arial;
+    text-decoration: none;
+}
+.menu ul li a:hover{
+    text-decoration: underline;
+}
+.mainup{
+    display: flex;
+}
+.line, .line2{
+    height: 55px;
+    background: url('../img/line.png');
+}
+.line{
+    width:calc(40% - 300px);
+}
+.line2{
+    width:60%;
+}
+.groupname{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:300px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:36px;
+    background: url('../img/pixel.png');
+}
+.main div{
+    border: 1px solid;
+}
+
+.timetable{
+    width: 1200px;
+}
+
+.timetable div{
+    display: flex;
+}
+.timetable div div{
+    height:60px;
+    width:150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial;
+    font-size: 18px;
+    border: 1px solid;
+    text-align: center;
+}
+
+.down{
+    display: flex;
+    justify-content: space-between;
+    color:#e4c4b5;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.down ul li{
+    list-style: none;
+}
+.down a{
+    justify-content: space-between;
+    color:#e4c4b5;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+.down a:hover{
+    text-decoration: underline;
+}
+.down div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fm2{
+    font-size: 16px;
+}
+```
 ## Калькулятор
-## Резюме
+
+
+### Calculator
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+   <div class="container">
+    <h2 class="title"> Решение задачи по микроэкономике </h2>
+       <h3 class="task"> Определите ВВП, исчисленный производственным методом, если:
+           рыночная цена выпущенной продукции - <b>P</b>; текущие материальные издержки - <b>М</b>; амортизационные
+           отчисления - <b>А</b>; косвенные налоги на товары и услуги - <b>Н</b>; государственные субсидии
+           на их производство - <b>С</b>.</h3>
+      <div class="task-content">
+       <h3> P:</h3><input id="p" value="" autocomplete="off">
+       <h3> M:</h3><input id="m" value="" autocomplete="off">
+       <h3> A:</h3><input id="a" value="" autocomplete="off">
+       <h3> H:</h3><input id="n" value="" autocomplete="off">
+       <h3> C:</h3><input id="c" value="" autocomplete="off">
+      </div>
+          <div class="task-text">
+          <h3 class="formula">
+              ВВП = ΣВДС + Н - С, где
+              ΣВДС - сумма валовой добавленной стоимости в основных ценах всех секторов или
+              отраслей экономики;
+          </h3>
+          <h3> Добавленная стоимость – это валовая продукция предприятия (или рыночная цена
+              выпущенной продукции) за минусом текущих материальных издержек, но с включением в
+              неё отчислений на амортизацию (так как основные фонды предприятия принимают
+              участие в создании новой стоимости производимой продукции). </h3>
+          <h3> ВВП:</h3> <p id="res"></p></div>
+       <div class="button">
+           <button id="btn"> click </button>
+       </div>
+
+
+   </div>
+<script src="js.js"></script>
+</body>
+</html>
+```
+CSS
+```css
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Fascinate', cursive;
+}
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    background: azure;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.task-content h3 {
+    margin: 5px;
+}
+h3,h2, button{
+    text-align: center;
+}
+.task-content, .task-text, .button {
+    text-align: center;
+}
+input {
+    font-size: 17px;
+    text-align: center;
+    padding: 10px;
+    height: 25px;
+    width: 300px;
+}
+.task-text {
+    margin: 0 35px;
+}
+button {
+    cursor: pointer;
+    width: 200px;
+    margin-bottom: 20px;
+}
+p {
+    font-size: 25px;
+    margin: 15px 0;
+}
+
+```
+JS
+```js
+btn.addEventListener("click",f_out);
+
+   function f_out (){
+       q = Number(p.value) - Number(m.value) + Number(a.value) + Number(n.value) - Number(c.value);
+       res.innerHTML = q;
+   }
+```
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="jOGEbzo" data-user="mikh-maksi" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/mikh-maksi/pen/jOGEbzo">
+  Untitled</a> by Mikhail (<a href="https://codepen.io/mikh-maksi">@mikh-maksi</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
 ## Ответ на 1 вопрос
+
+
+
 ## Ответ на несколько вопросов
 ## Ответ на несколько вопросов (используем объект)
 ## Получение для вопросов данных с сервера
