@@ -17,6 +17,9 @@
 .hidden{
     display: none;
 }
+.blk{
+    display: block;
+}
 #btn1{
     background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
 }

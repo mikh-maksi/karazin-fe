@@ -47,8 +47,8 @@ next_question.addEventListener("click", f_next_question);
     answers(k);
     }else{
       n_right.innerHTML=right_answer_n;
+      questions.classList.add("hidden");
 
-      wrapper.innerHTML='';
     }
   }
 

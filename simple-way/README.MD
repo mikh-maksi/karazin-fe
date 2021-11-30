@@ -60,7 +60,9 @@
 <img src = "./img/vscode05.png">  
 <img src = "./img/vscode06.png">  
 
-## Оформление текста(Новость)
+## Task1.
+
+**Оформление текста(Новость)** 
 
 |№|Альтернативные задания|Код|Скриншот|
 |---|---|---|---|
@@ -87,7 +89,8 @@
 <a href = "https://zn.ua/SPORT/objavlen-startovyj-sostav-sbornoj-ukrainy-na-match-protiv-kazakhstana.html">Взято с сайта Зеркало Недели</a>
 ```
 
-## Вставка текста на GitHub Pages
+## GitHub.
+**Вставка текста на GitHub Pages**
 Создание репозитария
 
 1. Заходим на **github.com** (если не зарегистрированы - зарегистрироваться)
@@ -147,7 +150,10 @@
 
 <img src = "img/image08.png">  
 
-## Тематический сайт (inline-blocks)
+## Task2
+
+**Тематический сайт (inline-blocks)**
+
 |№|Задание|Код|Скриншот|
 |---|---|---|---|
 |2|1. Создайте сайт, используя свойство display:inline-block|<a href = "https://github.com/mikh-maksi/karazin-fe/tree/main/simple-way#html">Код страницы</a>|<img src = "img/site.jpg" width = "300">|
@@ -251,11 +257,13 @@ footer{
 |---|---|---|---|
 |3|1. Пройти задания на сайте <a href ="https://flexboxfroggy.com/#ru">FlexFroggy</a><br>2. Пройти задания на сайте <a href ="https://flukeout.github.io/">CSS Diner</a><br>3. Пройти задания на сайте <a href ="http://www.flexboxdefense.com/">FlexBox Defence</a>|---|<img src = "img/flexfroggy.jpg" width = 300>|
 
-## Тематический сайт (flexbox)
+## Task4
+**Тематический сайт (flexbox)**
 
 |№|Задание|Код|Скриншот|
 |---|---|---|---|
 |4|1. Сверстать рассписание своей группы<br>2. Сверастать страницу с фотографиями преподавателей своей кафедры (<a href = "http://www.cyber.kharkov.ua/page-teachers.html">пример</a>) |<a href = "https://github.com/mikh-maksi/karazin-fe/tree/main/simple-way#Timetable">Код страницы</a>|<img src = "img/timetable.jpg">|
+
 ### Timetable
 ```html
 <!DOCTYPE html>
@@ -520,7 +528,9 @@ footer{
     font-size: 16px;
 }
 ```
-## Калькулятор
+## Task5
+**Калькулятор**
+
 |№|Задание|Код|Скриншот|
 |---|---|---|---|
 |5|1. Реализуйте расчетный калькулятор <br> 2. Добавьте к калькулятору основы теории<br> 3. Реализуйте в калькуляторе значения по-умолчанию (с помощью placeholder)<br>4. Добавьте 5 условий задач, которые решаются с помощью калькулятора|<a href = "https://github.com/mikh-maksi/karazin-fe/tree/main/simple-way#Calculator">Код страницы</a>|<img src = "img/calculator.jpg" width = 300>|
@@ -634,7 +644,8 @@ btn.addEventListener("click",f_out);
 </p>
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
-## Ответ на 1 вопрос
+## Task6
+**Ответ на 1 вопрос**
 
 |№|Задание|Код|Скриншот|
 |---|---|---|---|
@@ -832,7 +843,10 @@ function f_out1 (){
 ```
 <img src = "img/f1.jpg" width = 200> <img src = "img/f2.jpg" width = 200> <img src = "img/f3.jpg" width = 200> <img src = "img/f4.jpg" width = 200> 
 
-## Ответ на несколько вопросов
+## Task7
+
+**Ответ на несколько вопросов**
+
 |№|Задание|Код|Скриншот|
 |---|---|---|---|
 |7|1. Создайте тест из 5 вопросов с использованием массива |<a href = "https://github.com/mikh-maksi/karazin-fe/tree/main/simple-way#ArrayQuiz">Код страницы</a>|<img src = "img/quizarray.gif">|
@@ -989,10 +1003,299 @@ btn2.addEventListener("click", f_out2);
     
   }
 ```
+## Task8
+
+**Получение для вопросов данных с сервера**
+
+|№|Задание|Код|Скриншот|
+|---|---|---|---|
+|8|1. Запрограммируйте квиз, который получает данные с сервевера|<a href = "https://github.com/mikh-maksi/karazin-fe/tree/main/simple-way#JSONQuiz">Код страницы</a>|<img src = "img/quizjson.gif">|
+
+### JSONQuiz
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrapper" id="wrapper">
+        <div id="questions">
+        <h2 id = "title"></h2>
+        <p id  = "question"></p>
+        <p><input type="radio" name="year" id="y1"><span  id = "a1"></span></p>
+        <p><input type="radio" name="year" id="y2"><span  id = "a2"></span></p>
+        <p><input type="radio" name="year" id="y3"><span  id = "a3"></span></p>
+        <p><input type="radio" name="year" id="y4"><span  id = "a4"></span></p>
+
+    <button id = "get_answer">Дать ответ</button>
+    <div class="right_div hidden" id = "right_div">
+        <p class="right" id="right">Правильный ответ</p>
+        <button id = "next_question">Следующий вопрос</button>
+    </div>
+    <div class="wrong_div hidden" id="wrong_div">
+         <p class="wrong" id="wrong">Неправильный ответ</p>
+         <button id = "view_answer">Посмотреть ответ</button>
+    </div>
+
+     <p id="answer" class = "hidden"></p>
+    </div>
+     <div id="total_div">
+        <p>Номер вопроса: <span id="n"></span></p>
+        <p>Количество правильных ответов: <span id="n_right"></span> (с первого раза).</p>
+    </div>
+    </div>
+   
+    
+    <input type="hidden" value = "0" id = "n_question">
+    <script src="js/js.js"></script>
+</body>
+</html>
+```
+
+```css
+.wrapper{
+    margin:0 auto;
+    width:600px;
+    display: flex;
+    flex-direction: column;
+}
+.right{
+    background-color: rgba(0, 200, 0, 0.5);
+    border-radius: 5px;
+    padding-left:5px;
+}
+.wrong{
+    background-color: rgb(255, 44, 55);
+    border-radius: 5px;
+    padding-left:5px;
+}
+.hidden{
+    display: none;
+}
+#btn1{
+    background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+}
+.opend{
+    background-color: skyblue;
+}
+```
+
+```js
+right_answer_n = 0;
+
+k = Number(n_question.value);
+console.log(k);
+n.innerHTML=k+1;
+n_right.innerHTML=right_answer_n;
+point = 1;
+
+answers(n_question.value);
+
+get_answer.addEventListener("click", f_get_answer);
+view_answer.addEventListener("click", f_view_answer);
+next_question.addEventListener("click", f_next_question);
+
+  function f_get_answer (){
+
+    if (y1.checked){ n_a = 1;}
+    if (y2.checked){ n_a = 2;}
+    if (y3.checked){ n_a = 3;}
+    if (y4.checked){ n_a = 4;}
+
+    if (n_a == n_right_answer){
+      right_div.classList.remove("hidden");
+      wrong_div.classList.add("hidden");
+      right_answer_n = right_answer_n +point;
+      point = 0;
+    }else{
+      right_div.classList.add("hidden");
+      wrong_div.classList.remove("hidden");
+      point = 0;
+    }
+   
+  }
+  function f_view_answer (){
+    answer.classList.toggle("hidden");
+    view_answer.classList.toggle("opend");
+  }
+  function f_next_question (){
+    if (k<Number(n_question.value)-1){
+    console.log(k,Number(n_question.value));
+    right_div.classList.add("hidden");
+    answer.classList.add("hidden");
+    point = 1;
+    k+=1;
+    n_right.innerHTML=right_answer_n;
+    n.innerHTML=k+1;
+    answers(k);
+    }else{
+      n_right.innerHTML=right_answer_n;
+      questions.classList.add("hidden");
+
+    }
+  }
+
+function answers(k){
+  query = 'https://innovations.kh.ua/quiz/list/?author_id=0&n='+k;
+  console.log(query);
+  fetch(query).then(response => response.json())
+  .then(function (quiz) {
+    question.innerHTML=quiz.question_arr[0];
+    title.innerHTML = quiz.title_arr[0];
+    a1.innerHTML = quiz.a1_arr[0];
+    a2.innerHTML = quiz.a2_arr[0];
+    a3.innerHTML = quiz.a3_arr[0];
+    a4.innerHTML = quiz.a4_arr[0];
+    answer.innerHTML = quiz.answer_arr[0];
+    
+    n_right_answer = quiz.n_right_answer_arr[0];
+    n_question.value = quiz.total_n;
+    console.log(quiz);
+      
+  });
+}
+```
+
+## DataBase
+
+**Наполнение БД (MySQL)**
+1. Перейдя по ссылке в СУБД <a href = "https://phpmyadmin.adm.tools/signon.php?user=levelhst_quiz&password=xx2V%29H7%2B4e&account=levelhst">PhpMyAdmin</a>
+2. Создайте запись о своей группе в таблице **groups** (если такой записи еще нет)
+<img src = "img/phpmyadmin02.jpg">  
+<img src = "img/phpmyadmin03.jpg">  
+
+3. Создайте запись о себе в таблице **authors** (и запомните id такой записи).
+<img src = "img/phpmyadmin01.jpg">  
+<img src = "img/phpmyadmin04.jpg">  
+
+4. Создайте записи вопросов в таблице **questions**
+<img src = "img/phpmyadmin05.jpg">  
+<img src = "img/phpmyadmin06.jpg">  
+
+## Task9
+**React.js**
 
 
-## Ответ на несколько вопросов (используем объект)
-## Получение для вопросов данных с сервера
-## Наполнение БД (MySQL)
-## Создание endpoint
-## React.js
+|№|Задание|Код|Скриншот|
+|---|---|---|---|
+|9|1. Создайте приложение на React.js|<a href = "https://github.com/mikh-maksi/karazin-fe/tree/main/simple-way#react">Код страницы</a>|  |
+### react
+#### Установка
+1. Установить https://nodejs.org/en/
+2. npm install create-react-app -g
+3. create-react-app --version (проверяем версию)
+4. create-react-app name
+5. cd name
+6. npm start
+
+```js
+import React from "react";
+
+class App extends React.Component{
+  render(){
+    return (
+      <div>
+        <div>Hello</div>
+      </div>
+    );
+  }
+}
+
+export default App;
+
+```
+
+#### Создаем компоненты
+##### Создадим компонент info
+1. В папке `src` создаем папку `components`
+2. В папке `components` создаем файл `info.js`
+```js
+import React from "react";
+
+class Info extends React.Component{
+    render(){
+        return(
+            <div>
+                <h2>Информационный заголовок</h2>
+                <p>Информация</p>
+            </div>
+        );
+    }
+}
+```
+export default Info;
+
+в файле `app.js` импортируем файл `info.js`:
+
+В заголовке пишем:
+```js
+import Info from "./components/info"
+```
+в **render** ставим
+
+`<Info />` в месте где необходимо выводить данные соответствующего компонента.
+
+## Создадим компонент form
+1. В папке `components` создадим файл `form.js`
+2. В созданном файле разместим следующий текст:
+```js 
+import React from "react";
+
+class Form extends React.Component{
+    render(){
+        return(
+            <div>
+                <h2>Компонент с формой</h2>
+                <p>Информация</p>
+            </div>
+        );
+    }
+}
+
+export default Form;
+
+```
+
+
+#### Создадим компонент Weather
+
+#### Создадим компонент Подключим компоненты к главному компоненту
+
+```
+<form />
+<info />
+<Weather />
+```
+
+#### Выведем результаты fetch - запроса
+```js
+    const api_url = await
+    fetch(`http://api.openweathermap.org/data/2.5/weather?q=Kharkiv,ua&appid=58c3cca0622442647544fb302144ba06&units=metric`);
+    const data =await api_url.json();
+
+```
+
+#### Введем код в компонент Form
+```js
+import React from "react";
+
+class Form extends React.Component{
+    render(){
+        return(
+            <form onSubmit={this.props.weatherMethod}>
+                <input type = "text" name="city" placeholder="Город" />
+                <button>Получить погоду</button>
+            </form>
+
+        );
+    }
+}
+
+export default Form;
+```
+
