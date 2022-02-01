@@ -1,0 +1,48 @@
+.elements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.elements p {
+    text-align: center;
+}
+
+.forpic {
+    width: 300px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.elements .d {
+    border: 3px solid transparent;
+}
+
+.elements .d:hover {
+    border: 3px solid pink;
+    cursor: pointer;
+}
+
+.result {
+    text-align: center;
+}
+
+.cntr {
+    text-align: center;
+    width: 300px;
+    margin: 0 auto;
+}
+.variants{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
