@@ -37,11 +37,7 @@ const data = [
         { image: 'mova.jpg', text: 'Мова та література' },
         { image: 'lis.jpg', text: 'Людина і світ, фізкультура' },
         { image: 'malyuvannya.png', text: 'Малювання' },
-        { image: 'natural_science.jpg', text: 'Физика, химия, биология, география' },
-        { image: 'minecraft.jpeg', text: 'Программирование во вселенной Minecraft' },
-        { image: 'roblox2.jpeg', text: 'Создание игр на Roblox' },
-        { image: 'gamedev.jpeg', text: 'Создание игр на C# и Unity' },
-        { image: 'python.jpeg', text: 'Программирование на Python' },
+        { image: 'natural_science.jpg', text: 'Физика, химия, биология, география' }
     ]
 }
     ,
@@ -54,6 +50,20 @@ const data = [
     ]
 }
 ]
+
+// var courses = ["course_scratch.png","minecraft_building.jpg","course_minecraft.png","course_junior.png","roblox-studio.jpg","course_fe.png","course_da.png","course_gd.png","course_py.png"];
+
+var courses = [{name:"Scratch",img:"course_scratch.png"},
+{name:"Minecraft Building",img:"minecraft_building.jpg"},
+{name:"Minecraft",img:"course_minecraft.png"},
+{name:"Front End Junior",img:"course_junior.png"},
+{name:"Roblox studio",img:"roblox-studio.jpg"},
+{name:"FrontEnd",img:"course_fe.png"},
+{name:"IT-Design",img:"course_da.png"},
+{name:"GameDev",img:"course_gd.png"},
+{name:"Python",img:"course_py.png"}];
+
+
 // Список решений answers
 // Массив допусков - если в решении на предыдущем шаге будет значение x, то можно вывести на экран значения элементов data на этом шаге
 // Цикл
@@ -90,7 +100,7 @@ let check = [
         [1, 1, 1, 1, 1, 0, 0, 0, 0],
         [1, 1, 1, 1, 1, 0, 0, 0, 0],
         [1, 1, 1, 1, 1, 1, 0, 0, 0],
-        [1, 0, 0, 0, 0, 0, 0, 0, 0],
+        [1, 1, 1, 1, 0, 0, 0, 0, 0],
         [1, 0, 0, 0, 0, 0, 0, 0, 0]
     ]
 ];
@@ -155,6 +165,53 @@ function elem_out(n) {
             answer_string += answers[i] + ' ';
         }
         console.log(answer_string);
+        let course_number = 1;
+        if (answers[0] == 0 || answers[0] == 1){
+            if (answers[1]==4)
+                course_number = 0;
+            if (answers[1]==5)
+                course_number = 1;
+
+        }
+        if (answers[0] == 2 || answers[0] == 3 ){
+            if (answers[1]==1)
+                course_number = 3;
+            if (answers[1]==6)
+                course_number = 2;
+        }
+        if (answers[0] == 4 ){
+            if (answers[1]==1)
+                course_number = 3;
+            if (answers[1]==2)
+                course_number = 6;
+            if (answers[1]==6)
+                course_number = 2;
+            if (answers[1]==7)
+                course_number = 4;
+        }
+        if (answers[0] == 5 ){
+            if (answers[1]==1)
+                course_number = 5;
+            if (answers[1]==2)
+                course_number = 6;
+            if (answers[1]==6)
+                course_number = 2;
+            if (answers[1]==7)
+                course_number = 4;
+        }
+        if (answers[0] >= 6 ){
+            if (answers[1]==0)
+                course_number = 8;
+            if (answers[1]==1)
+                course_number = 5;
+            if (answers[1]==2)
+                course_number = 6;
+            if (answers[1]==3)
+                course_number = 7;
+        }
+
+
+
         wrapper.innerHTML = "";
         let elem_elem = document.createElement('div');
         const newLocal = 'elements cntr';
@@ -162,10 +219,10 @@ function elem_out(n) {
         elem_elem.id = 'elements';
         let elem_img = document.createElement('img');
         elem_img.width = 300;
-        elem_img.src = "img/win.png";
+        elem_img.src = "img/"+courses[course_number].img;
         elem_elem.appendChild(elem_img);
         let elem_p = document.createElement('p');
-        elem_p.innerHTML = answer_string;
+        elem_p.innerHTML = "<h2>"+courses[course_number].name+"</h2><br>"+answer_string;
         elem_elem.appendChild(elem_p);
         wrapper.appendChild(elem_elem);
     }
