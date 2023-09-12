@@ -38,5 +38,36 @@
 Строчні блоки - це такі, які максимально схожі на тексти. У таких блоків є стилі тексту, але немає відступив та розмірів. Блочні - мають ширину та висоту та відступи, але на мають властивості оформлення тексту. Строчно-блочні - мають властивості оформлення тексту, ширину та висоту та відступи,
 
 ### Відступи
-* **margin-left: 120px;** - відступ зліва 120 пікселів.
-* **padding-top: 500px;** - 
+* **width: 100px;** - ширина 100 пікселів
+* **height: 100px;** - висота 100 пікселів
+* **border: 1px solid black;** - границя 1 піксель із неперервною лінією чорна
+* **margin-left: 10px;** - зовнішній лівий відступ 10 пікселів
+* **padding-top: 20px;** - внутрішній верхній відступ 20 пікселів.
+  
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .d1{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            margin-left:10px;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="d1">
+        Hello, World
+    </div>
+</body>
+</html>
+```
+
+<img src = "img/lesson02.jpg">  
