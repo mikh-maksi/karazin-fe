@@ -71,3 +71,5 @@
 ```
 
 <img src = "img/lesson02.jpg">  
+
+## Flexbox
