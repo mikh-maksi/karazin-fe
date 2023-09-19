@@ -1,0 +1,57 @@
+.logo {
+    vertical-align: middle;
+    height: 128px;
+}
+.title {
+    vertical-align: middle;
+    font-family: 'Bad Script', cursive;
+    font-size: 36px;
+}
+.logoimg {
+    height: 100px;
+}
+.wrapper header{
+    display: flex;
+    flex-direction: row;
+    /* flex-direction: column; */
+    justify-content: flex-start;
+
+    /* justify-content: center; */
+    /* align-items: flex-end; */
+    align-items:center;
+}
+nav{
+    background: #AAA;
+}
+.list{
+    display: flex;
+}
+.list li{
+    list-style: none;
+    padding: 10px;
+    border:1px solid transparent;
+}
+.list li:hover{
+    border: 1px solid black;
+}
+.list li a{
+    color:black;
+}
+main{
+    display: flex;
+}
+.left{
+    width:20%;
+}
+.right{
+    width:79%;
+}
+footer{
+    background: #AAA;
+    text-align: center;
+    font-weight: bold;
+}
+h2{
+    padding: 0;
+    margin: 0;
+}
