@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input,button,select{
+            max-width: 200px;
+        }
+        .wrapper{
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+    <input type="text" id = "input_a">
+    <select name="" id="act">
+        <option value="1">+</option>
+        <option value="2">-</option>
+        <option value="3">*</option>
+        <option value="4">/</option>
+    </select>
+    <input type="text" id = "input_b">
+    <input type="text" id = "input_c">
+    <button id = "btn">Action</button>
+    </div>
+<script>
+    function fnc(){
+        let a = parseInt(input_a.value);
+        let b = parseInt(input_b.value);
+        var el=document.getElementById('act');
+        console.log(el.value);
+        var c;
+        if (el.value ==1){c = a + b;}
+        if (el.value ==2){c = a - b;}
+        if (el.value ==3){c = a * b;}
+        if (el.value ==4){c = a / b;}
+        input_c.value = c;
+        console.log(c);
+    }
+    btn.addEventListener("click",fnc);
+</script>
+</body>
+</html>
