@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+async function fetchImage(request) {
+  try {
+    const response = await fetch(request);
+    if (!response.ok) {
+        console.log(response);
+      throw new Error("Network response was not OK");
+    }
+    const myBlob = await response.blob();
+    myImage.src = URL.createObjectURL(myBlob);
+  } catch (error) {
+    console.error("Error:", error);
+  }
+}
+
+const myHeaders = new Headers();
+
+const myRequest = new Request("https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5", {
+  method: "GET",
+  headers: myHeaders,
+  mode: "no-cors",
+  cache: "default",
+});
+
+fetchImage(myRequest);
+
+
+    </script>
+</body>
+</html>
