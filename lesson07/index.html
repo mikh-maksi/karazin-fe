@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- MAX Z = 3x1 + 4x2
+subject to
+x1 + 2x2 <= 4
+x1 + x2 <= 3
+2x1 + x2 <= 8
+and x1,x2 >= 0  -->
+    <script>
+var C =[3,4,0,0,0]
+var Xb = [3,4,8]
+var B = [2,3,4]
+// var A= [[1,2,3],[4,5,6],[7,8,9]]
+// for(i=0;i<3;i+=1){
+//     for(j=0;j<3;j+=1){
+//     console.log(A[i][j])
+// }
+// }
+for(i=0;i<5;i+=1){
+    console.log(C[i])
+}
+var A= [[1,2,1,0,0],[1,1,0,1,0],[2,1,0,0,1]]
+for(i=0;i<A.length;i+=1){
+    for(j=0;j<A[i].length;j+=1){
+    console.log(A[i][j])
+}
+}
+console.log("B")
+var Cb=[];
+for(i=0;i<B.length;i+=1){
+    // console.log(B[i]);
+    console.log(C[B[i]]);
+    Cb.push(C[B[i]]);
+}
+console.log(Cb);
+var Zj = [];
+for(i=0;i<3 ;i+=1){
+    sum_line = 0;
+    for(j=0;j<5;j+=1){
+        sum_line+=A[i][j]*Cb[i];
+}
+    Zj.push(sum_line)
+}
+console.log(Zj);
+
+delta = []
+for(i=0;i<Zj.length;i+=1){
+    delta.push(Zj[i]-C[i]);
+}
+console.log(delta);
+
+console.log(delta);
+min=delta[0];
+i_min =0;
+for(i=0;i<delta.length ;i+=1){
+        if (delta[i]<min){
+            min = delta[i];
+            i_min = i;
+    }
+}
+console.log("min = "+min+" i_min = "+i_min);
+
+
+    </script>
+</body>
+</html>
