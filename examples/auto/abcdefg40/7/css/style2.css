@@ -1,0 +1,20 @@
+.text{
+    font-size: 30px;
+}
+.text:hover{
+    text-decoration: line-through;
+}
+a.text{
+    color:pink;
+}
+a.text:hover{
+    color:green;
+    text-decoration: none;
+}
+a.text:active{
+    color:red;
+    text-decoration: none;
+}
+.text:active{
+    color:red;
+}

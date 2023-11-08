@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="out"></div>
+    <button id = "btn">getJSON</button>
+    <script>
+        var request = new XMLHttpRequest(); 
+        btn.addEventListener("click",sndFnc);
+        
+        /*Функция отпрваки запроса*/
+        function sndFnc(){ 
+            request.open("GET", "https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5");
+            request.onreadystatechange = reqReadyStateChangeUpd;        
+            request.send();
+        }
+        
+        /*Функция обаботки ответа*/
+        function reqReadyStateChangeUpd() {
+        if (request.readyState == 4) {    
+            var status = request.status;
+            if (status == 200) { 
+                obj = JSON.parse(request.responseText);
+                let res = document.createElement("div");
+                res.innerHTML = obj[0].ccy+" / "+obj[0].base_ccy+" buy:"+obj[0].buy+" sale:"+obj[0].sale;
+                console.log(obj);
+                out.append(res);
+                }   }   }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+.wrapper{
+    width:1200px;
+    margin:0 auto;
+}
+.headerLine{
+    margin-top:110px;
+    height:270px;
+    background: #444341;
+    color: white;
+    font-family: Roboto;
+    display: flex;
+    display: relative;
+}
+.logoHeader{
+    width:550px
+}
+.logoHeader_block{
+    width: 345px;
+    height: 345px;
+    background-image: url(../img/img.jpeg);
+    background-size:cover;
+    border:5px solid black;
+    border-radius: 175px;
+    position: relative;
+    top:-44px;
+    left:75px;
+
+}
+.headerText{
+    width: 650px;
+}

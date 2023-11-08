@@ -1,0 +1,32 @@
+input{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0 0 0 10px;
+    width: 230px;
+    height: 40px;
+    border: 1px solid #e5e5e5;
+
+    &:invalid:focus{
+        border: 2px solid #ff0000;
+        
+    }
+
+    &:valid{
+        border: 2px solid #00ff00;
+        
+    }
+    
+    &::placeholder{
+        @include font-settings(15px, 1.6)
+        
+        font-family: $font-family-Roboto;
+        color: rgb(204, 204, 204);
+        font-style: italic;
+       
+    }
+}
+
+
+
+
+

@@ -1,0 +1,26 @@
+.header {
+    height: 200px;
+    border: 1px solid black;
+    padding-top: 20px;
+}
+
+.header__logo {
+    margin-left: 50px;
+}
+
+.logo {
+    width: 150px;
+}
+
+.header__logo--hoverBorder:hover {
+    border: 1px solid red;
+}
+
+.logo__link {
+    display: block;
+    line-height: 30px;
+}
+
+.logo__link--hover_underline:hover {
+    text-decoration: none;
+}

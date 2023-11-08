@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+    <picture>
+        <source media="(max-width: 799px)" srcset="elva-480w-close-portrait.jpg">
+        <source media="(min-width: 800px)" srcset="elva-800w.jpg">
+        <img src="elva-800w.jpg" alt="Chris standing up holding his daughter Elva">
+    </picture>
+-->
+    <!--<picture>
+        <source srcset="img/youtube_256.png 256w, img/youtube_512.png 2x">
+        <source srcset="img/youtube_128.png 128w, img/youtube_256.png 2x">
+        <img src="img/youtube_512.png" alt="Youtube">
+    </picture>
+-->
+    <picture>
+        <source srcset="img/youtube_512.png" media="(min-width: 900px) ">
+        <source srcset="img/youtube_256.png" media="(min-width: 600px)">
+        <source srcset="img/youtube_256.png" media="(min-width: 300px) and (-webkit-min-device-pixel-ratio: 2)">
+        <source srcset="img/youtube_128.png" media="(min-width: 300px) ">
+        <source srcset="img/youtube_64.png" media="(min-width: 100px)">
+        <img src="img/youtube_64.png" alt="Youtube">
+    </picture>
+</body>
+
+</html>

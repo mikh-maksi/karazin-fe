@@ -1,0 +1,247 @@
+html{
+    box-sizing: border-box;
+    line-height: 1;
+}
+
+*,
+*::before,
+::after{    
+    box-sizing: inherit;
+}
+
+body{
+    height: auto;
+    margin: 0 auto;
+
+    font-family: 'Open Sans Bold', sans-serif; 
+    font-size: 14px;
+
+}
+
+.container{
+    width: 1110px;
+    height: auto;
+    margin: 0 auto;  /* отцентрировал блок*/
+    padding: 0;   
+    list-style: none;
+}
+/*Header nav*/
+
+.nav-site{
+float: right;
+}
+
+.nav-site li{
+    float: left;
+    margin-right: 30px;
+
+    list-style-type:none; /*убрали маркеры*/
+    line-height: 11px;
+    font-weight: bold;
+
+}
+.nav-site li:last-child{
+    margin-right: 0;
+}
+
+a{
+    text-decoration: none;
+    text-transform: uppercase; /*заглавные буквы*/
+    color: #000;
+
+    outline: none;   /*убирает рамку на сылке*/
+}
+header{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.loge-mart{
+    float: left;
+    margin-bottom: 0;
+    padding: 0;
+
+    font-family: "Roboto",sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 32px;
+    color: #000;
+}
+.loge-mart::first-letter{
+    font-family: "Roboto Black",sans-serif;
+    color: rgb(26, 188, 156);
+}
+
+.nav-site a:hover,
+.nav-site a:focus{
+    color: rgb(26, 188, 156);
+  }
+/* для того чтобы теги чувствовали float*/
+.clearfix::after{
+      display: table;
+      content: "";
+      clear: both;
+  }
+  /*main to do*/ 
+main ,
+h2,
+section{
+      margin: 0;
+      padding: 0;
+  }
+section{
+    padding-bottom: 80px;
+}  
+
+section h2 {
+    margin-bottom:80px;
+    font-size: 48px;
+    font-family: "Roboto Black",sans-serif;
+    color: rgb(81, 81, 81);
+    text-transform: uppercase;
+    line-height: 100px;
+    text-align: center;
+
+}
+section h2::after{
+    display:block;
+    margin: 0 auto;
+    width: 170px;
+    height: 7px;
+    content: "";
+    background-color:#4ec6ab; 
+}
+
+.featured,
+.latest-content {
+    float: left; 
+
+    margin: 0;
+    padding: 0;
+    margin-bottom: 30px;
+    margin-right: 30px;
+  }
+
+/*featured products */
+.featured{
+    width: 255px;
+    height: auto;
+    background: linear-gradient(to right ,#000 78%, #8c8c8c 22%);
+}
+.featured:hover ,
+.featured:focus {
+    background: linear-gradient(to right ,#1abc9c 78%, #7fd9c7 22%);
+}
+
+.featured:nth-child(4n+1){
+    margin-right: 0px;
+}
+.featured:nth-child(n+5){
+    margin-bottom: 0px;
+}
+.featured img{
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 255px;
+    height: 284px;
+}
+
+.featured p,
+.featured a{
+    padding:0;
+    margin: 0; 
+    
+    text-align: left;/* горизонтальное выравнивание текста  */
+    line-height: 40px;/* горизонтальное выравнивание текста  */
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+  }
+
+.featured a {
+    float: left;
+    margin-left: 13px;
+}
+
+.featured p{
+    float: right;
+    margin-right: 15px;
+}
+
+.featured p::before{
+    content:"\0024";
+}
+
+/*latest news*/
+.latest-content,
+.latest-content p,
+.latest-content h3,
+.read-more{
+    float: left;
+
+    margin: 0;
+    padding: 0;
+
+    font-family: "OpenSans",sans-serif;
+    color: rgb(85, 82, 82);
+    line-height: 26px;
+  }
+
+.latest-content{
+    width: 350px;
+    margin-right: 30px;
+  }
+
+.latest-content img{
+    float: left;
+    width: 350px;
+    height: 264px;
+    margin-bottom: 11px;
+  }
+
+.latest-content:last-child {
+    margin-right: 0px;
+  }
+
+.latest-content p {
+    margin-bottom: 18px;
+    font-size: 14px;
+  }
+/*latest news h3*/
+.latest-content h3{
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 24px;
+  }
+
+.latest-content h3::after{
+    display:block;
+    content: "";
+    
+    margin-top: 15px; 
+    width: 134px;
+    height: 4px;
+    
+    background-color:#4ec6ab; 
+}
+/*latest news bottom*/
+.read-more{
+    width: 160px;
+    height: 50px;
+
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;/* горизонтальное выравнивание текста  */
+
+    outline: none;   /*убирает рамку на сылке*/
+    border-radius: 5px;
+    background: #000;
+  }
+
+  .read-more:hover,
+  .read-more:focus{
+    background: #4ec6ab;
+  }

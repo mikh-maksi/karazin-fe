@@ -1,0 +1,81 @@
+    .wrapper {
+        display: flex;
+    }
+    
+    .our-team-item {
+        position: relative;
+    }
+    
+    .our-team-item-background {
+        width: 380px;
+        height: 470px;
+        background-color: rgb(149, 225, 211);
+    }
+    
+    .our-team-item-background img {
+        transition: transform 0.2s linear;
+    }
+    
+    .our-team-item:hover>.our-team-item-background img {
+        transform: translate(-10px, -10px);
+    }
+    /*Общий блок*/
+    
+    .social-list {
+        position: absolute;
+        top: 0px;
+        margin: 0px;
+        padding: 0px;
+        width: 380px;
+        height: 470px;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to top, rgba(252, 227, 138, 0.9), rgba(243, 129, 129, 0.9));
+        opacity: 0;
+        transition: opacity 0.2s linear, transform 0.2s linear;
+    }
+    /* Иконки социальных сетей */
+    
+    .our-team-item:hover>.social-list,
+    .our-team-item:focus>.social-list {
+        transform: translate(-10px, -10px);
+        opacity: 1;
+    }
+    
+    .social-list li:not(:last-child) {
+        margin-right: 1px;
+    }
+    
+    .social-item {
+        width: 56px;
+        height: 56px;
+    }
+    
+    .social-item a {
+        display: block;
+        height: 56px;
+        background-color: #fce38a;
+        transition: background-color 0.2s linear;
+    }
+    
+    .social-item:first-child a {
+        background-image: url(../img/facebook.png);
+    }
+    
+    .social-item:nth-child(2) a {
+        background-image: url(../img/twitter.png);
+    }
+    
+    .social-item:nth-child(3) a {
+        background-image: url(../img/pinterest.png);
+    }
+    
+    .social-item:last-child a {
+        background-image: url(../img/instagram.png);
+    }
+    
+    .social-item a:hover {
+        background-color: #95e1d3;
+    }

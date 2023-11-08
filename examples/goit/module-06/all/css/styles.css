@@ -1,0 +1,446 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Montserrat", "Arial", sans-serif;
+    color: rgb(51, 51, 51);
+    font-weight: 400;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* HEADER START */
+.page-nav {
+    display: flex;
+    min-height: 94px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*LOGO START */
+.site-logo {
+    display: block;
+    text-decoration: none;
+    animation: logo-appear 2s;
+}
+
+.site-logo p {
+    margin: 0px;
+    font-size: 30px;
+    color: #46bfa9;
+    font-weight: 700;
+    line-height: 36px;
+}
+
+@keyframes logo-appear {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(2);
+        opacity: 0;
+    }
+    51% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* LOGO FINISH 
+-------------------
+NAVIGATION START */
+.site-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    min-width: 490px;
+}
+
+.site-navigation a {
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+    color: #46bfa9;
+    text-transform: uppercase;
+    line-height: 17px;
+    transition: color 0.2s linear;
+}
+
+.site-navigation a::after {
+    display: flex;
+    width: 50px;
+    height: 3px;
+    background-color: #f38181;
+    content: "";
+    margin: 0px auto;
+    margin-top: 8px;
+    opacity: 0;
+    transition: opacity 0.2s linear;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus {
+    color: #f38181;
+}
+
+.site-navigation a:hover::after,
+.site-navigation a:focus::after {
+    opacity: 1;
+}
+
+/*  NAVIGATION FINISH   
+------------------------
+        MAIN START      
+SECTION SERVICE START */
+.service {
+    padding-top: 96px;
+    padding-bottom: 85px;
+}
+
+/*  SECTIONS SERVICE,   
+OUR-TEAM TITLES START */
+.section-title {
+    margin: 0px;
+    font-size: 30px;
+    line-height: 36px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+}
+
+.section-title span {
+    display: block;
+    font-family: "Kaushan Script", cursive;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+    text-transform: none;
+    text-align: center;
+    padding-bottom: 16px;
+}
+
+.section-title::after {
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #f38181;
+    content: "";
+    margin: 0px auto;
+    margin-top: 40px;
+}
+
+.service h2 {
+    margin-bottom: 64px;
+}
+
+.our-team h2 {
+    padding-bottom: 46px;
+}
+
+/*  SECTIONS SERVICE,   
+OUR-TEAM TITLES FINISH  
+------------------------
+  SERVICE-LIST START  */
+.service-list {
+    margin: 0px;
+    padding-left: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 245px;
+    justify-content: space-between;
+    align-content: space-between;
+    list-style: none;
+}
+
+/*  SERVICE-ITEM START  */
+.service-item {
+    position: relative;
+    flex: 0 0 380px;
+}
+
+
+.service-item h3,
+.service-item p {
+    margin: 0px;
+    padding-left: 80px;
+}
+
+.service-item h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 17px;
+    margin-bottom: 9px;
+}
+
+.service-item h3::before {
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    display: inline-block;
+    content: '';
+    width: 32px;
+    height: 32px;
+}
+
+.service-item:first-child h3::before {
+    background-image: url(../img/ALARM.png);
+}
+
+.service-item:nth-child(2) h3::before {
+    background-image: url(../img/LINE_GRAPH.png);
+}
+
+.service-item:nth-child(3) h3::before {
+    background-image: url(../img/COMPUTER_OK.png);
+}
+
+.service-item:nth-child(4) h3::before {
+    background-image: url(../img/BOOK2.png);
+}
+
+.service-item:nth-child(5) h3::before {
+    background-image: url(../img/HOME.png);
+}
+
+.service-item:last-child h3::before {
+    background-image: url(../img/IMAGE.png);
+}
+
+.service-item p {
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+/* SERVICE-ITEM FINISH     
+   SERVICE-LIST FINISH     
+  SECTION SERVICE FINISH   
+---------------------------
+  SECTION OUR-TEAM START */
+.our-team {
+    padding-bottom: 78px;
+}
+
+.our-team-text {
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 15px;
+    color: rgb(153, 153, 153);
+    line-height: 24px;
+    text-align: center;
+    padding: 0px 120px;
+    padding-bottom: 85px;
+}
+
+/*  OUR-TEAM LIST START  */
+.our-team-list {
+    margin: 0px;
+    padding-left: 0px;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.our-team-item {
+    position: relative;
+    height: 545px;
+    
+}
+
+.our-team-item-background {
+    width: 380px;
+    height: 470px;
+    background-color: rgb(149, 225, 211);
+}
+
+.our-team-item-name {
+    margin: 0px;
+    padding-top: 28px;
+    font-size: 14px;
+    color: rgb(51, 51, 51);
+    text-transform: uppercase;
+    line-height: 17px;
+    text-align: center;
+}
+
+.our-team-item-profession {
+    margin: 0px;
+    padding-top: 7px;
+    font-size: 15px;
+    font-family: "Roboto", "Arial", sans-serif;
+    color: rgb(153, 153, 153);
+    font-style: italic;
+    font-weight: 300;
+    line-height: 24px;
+    text-align: center;
+}
+
+.our-team-item-background img {
+    transition: transform 0.2s linear;
+}
+
+.our-team-item:hover>.our-team-item-background img,
+.our-team-item:focus>.our-team-item-background img {
+    transform: translate(-10px, -10px);
+}
+
+.our-team-item:hover>.social-list,
+.our-team-item:focus>.social-list {
+    transform: translate(-10px, -10px);
+    opacity: 1;
+}
+
+/* SOCIAL-LIST START */
+.social-list {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 380px;
+    height: 470px;
+    position: absolute;
+    top: 0px;
+    background: linear-gradient(to top, rgba(252, 227, 138, 0.9), rgba(243, 129, 129, 0.9));
+    opacity: 0;
+    transition: opacity 0.2s linear, transform 0.2s linear;
+}
+
+.social-list li:not(:last-child) {
+    margin-right: 1px;
+}
+
+.social-item {
+    width: 56px;
+    height: 56px;
+}
+
+.social-item a {
+    display: block;
+    height: 56px;
+    background-color: #fce38a;
+    transition: background-color 0.2s linear;
+}
+
+.social-item:first-child a {
+    background-image: url(../img/facebook.png);
+}
+
+.social-item:nth-child(2) a {
+    background-image: url(../img/twitter.png);
+}
+
+.social-item:nth-child(3) a {
+    background-image: url(../img/pinterest.png);
+}
+
+.social-item:last-child a {
+    background-image: url(../img/instagram.png);
+}
+
+.social-item a:hover,
+.social-item a:focus {
+    background-color: #95e1d3;
+}
+
+/*  SOCIAL-LIST FINISH     
+  SECTION OUR-TEAM FINISH  
+        MAIN FINISH        
+---------------------------
+       FOOTER START      */
+footer>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 0px;
+    border-top-width: 1px;
+    border-color: rgb(229, 229, 229);
+    border-style: solid;
+    height: 62px;
+}
+
+footer p {
+    margin: 0px;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+footer a {
+    display: inline-block;
+    text-decoration: none;
+    color: #46bfa9;
+    transition: color 0.2s linear;
+}
+
+footer a:hover,
+footer a:focus {
+    color: #f38181;
+}
+
+.subscribe {
+    display: flex;
+}
+
+.subscribe input {
+    padding: 0px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(231, 231, 231);
+    background-color: rgb(255, 255, 255);
+    width: 230px;
+    height: 40px;
+    font-size: 15px;
+    font-family: "Roboto", "Arial", sans-serif;
+    color: rgb(204, 204, 204);
+    font-style: italic;
+    line-height: 24px;
+}
+
+.subscribe button {
+    padding: 0px;
+    border: 0px;
+    background-color: rgb(149, 225, 211);
+    width: 150px;
+    height: 40px;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 17px;
+    text-align: center;
+    transition: color 0.2s cubic-bezier(0, 0, 1, 1);
+}
+
+.subscribe button:hover,
+.subscribe button:focus {
+    color: #f38181;
+}
+
+/*    FOOTER FINISH    */

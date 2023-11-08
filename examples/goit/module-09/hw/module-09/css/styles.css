@@ -1,0 +1,185 @@
+body {
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: rgb(51, 51, 51);
+    line-height: 1.2;
+}
+
+.container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+a {
+    display: block;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-align: center;
+}
+
+/*  HEADER START  */
+header {
+    position: relative;
+    color: rgb(255, 255, 255);
+    background-repeat: no-repeat;
+
+}
+
+.authorization {
+    display: flex;
+    justify-content: center;
+}
+
+.authorization-item {
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 20px;
+    border-color: rgba(255, 255, 255, 0);
+    width: 94px;
+    height: 40px;
+}
+
+.authorization-item:hover,
+.authorization-item:focus {
+    border-color: rgba(255, 255, 255, 1);
+}
+
+.authorization-item a {
+    padding-top: 9px;
+}
+
+.logo {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.site-title {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.site-sub-title {
+    font-family: "Roboto", "Arial", sans-serif;
+    font-weight: 300;
+    text-align: center;
+}
+
+.partners-link {
+    margin: 0 auto;
+    padding-top: 9px;
+    border-radius: 20px;
+    background-color: rgb(255, 78, 80);
+    height: 40px;
+}
+
+.partners-link:hover,
+.partners-link:focus {
+    color: rgb(255, 78, 80);
+    background-color: rgb(255, 255, 255);
+}
+
+/*      HEADER FINISH       
+----------------------------
+        MAIN START          
+  SECTION PARTNERS START  */
+.partners {
+    margin: 0 auto;
+    padding-top: 68px;
+}
+
+.partners-title {
+    font-size: 22px;
+    text-align: center;
+}
+
+/*  PARTNERS LIST START  */
+.wrapper-img {
+    display: block;
+    position: relative;
+    width: 128px;
+    height: 128px;
+    padding: 4px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.partner-img {
+    display: block;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.wrapper-img::after {
+    position: absolute;
+    content: '';
+    right: 0;
+    bottom: 0;
+    border-style: solid;
+    border-width: 4px;
+    border-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.partners-list-item:first-child .wrapper-img::after {
+    background-image: url(../img/TV_icon.png);
+    background-color: rgb(255, 78, 80);
+}
+
+.partners-list-item:nth-child(2) .wrapper-img::after {
+    background-image: url(../img/flask_icon.png);
+    background-color: rgb(255, 165, 7);
+}
+
+.partners-list-item:nth-child(3) .wrapper-img::after {
+    background-image: url(../img/coffee_icon.png);
+    background-color: rgb(28, 215, 173);
+}
+
+.partners-list-item:last-child .wrapper-img::after {
+    background-image: url(../img/telegram_icon.png);
+    background-color: rgb(78, 115, 219);
+}
+
+.partners-list-item p {
+    text-align: center;
+}
+
+.partner-name {
+    padding-bottom: 15px;
+  }
+
+.description {
+    font-family: "Roboto", "Arial", sans-serif;
+    font-weight: 300;
+    color: rgb(102, 102, 102);
+}
+
+/*  PARTNERS LIST FINISH  */
+.partners button {
+    display: block;
+    padding: 0;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(255, 78, 80);
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    height: 44px;
+    margin: 0 auto;
+    color: rgb(255, 78, 80);
+    text-align: center;
+}
+
+.partners button:hover,
+.partners button:focus {
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 78, 80);
+}
+
+/*   SECTION PARTNERS FINISH    
+            MAIN FINISH       */

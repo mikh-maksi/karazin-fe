@@ -1,0 +1,23 @@
+.main_title{
+    margin: 0 auto;
+    width: 820px;
+    @include font-settings(150px, 0.933)
+    font-family: $font-family-Montserrat;
+    color: $accent-color-white;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 125px;
+    
+}
+
+.main_title__add{
+    display: block;
+    text-transform: capitalize;
+    @include font-settings(72px, 1.2)
+    font-family: $font-family-Kaushan;
+    color: $accent-color-white;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: lighter;
+}

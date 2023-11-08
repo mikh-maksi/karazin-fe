@@ -1,0 +1,15 @@
+.background_image{
+    height: 1000px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: linear-gradient( 90deg, rgba(252,227,138,0.9) 0%, rgba(243,129,129,0.9) 100%), url(..//images/picture.jpg);
+    margin-bottom: 40px;
+
+   
+}
+@media (min-resolution: 2dppx){
+    .background_image{
+        background-image: linear-gradient( 90deg, rgba(252,227,138,0.9) 0%, rgba(243,129,129,0.9) 100%), url(..//images/picture@2x.jpg);
+        }
+}

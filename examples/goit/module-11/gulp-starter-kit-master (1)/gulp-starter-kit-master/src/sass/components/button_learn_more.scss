@@ -1,0 +1,16 @@
+.learn_more{
+    text-decoration: none;
+    display: block;
+    width: 160px;
+    height: 40px;
+    margin: 0 auto;
+    border: 2px solid #fff;
+    @include font-settings(14px, 36px)
+    font-family: $font-family-Montserrat;
+    color: $accent-color-white;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: transparent;
+    
+}

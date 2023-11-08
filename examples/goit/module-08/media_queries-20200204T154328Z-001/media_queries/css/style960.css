@@ -1,0 +1,8 @@
+﻿article{
+	width:960px;
+	height:500px;
+	background:blue;
+}
+#text:after{
+	content:"960";
+}

@@ -1,0 +1,8 @@
+﻿article{
+	width:768px;
+	height:400px;
+	background:green;
+}
+#text:after{
+	content:"768";
+}

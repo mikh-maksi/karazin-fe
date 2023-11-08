@@ -1,0 +1,428 @@
+html{
+    box-sizing: border-box;
+    line-height: 1;
+}
+p
+*,
+*::before,
+::after{    
+    box-sizing: inherit;
+}
+/* обьявление переменых*/
+:root{
+    --hover_time: 200ms;
+
+    --color_hover:rgb(243, 129, 129);/*Цвет для ховеров*/
+    --color_main:rgb(148, 225, 211); /*Основной цвет*/
+    --color_lg:rgb(252, 227, 138); /*background-color icon*/
+    --color_h2p:rgb(51, 51, 51);/*цвет текста h2 p*/
+    --color_p:rgb(153, 153, 153);
+    --color_email:rgb(204, 204, 204);
+ 
+    --ffmb:  "Montserrat";
+    --ffmr:  "Montserrat Regular";
+    --ffks:  "Kaushan Script Regular";
+    --ffrr:  "Roboto Regular";
+    --ffrli: "Roboto Light Italic";
+    --ffss:   sans-serif;
+
+    /* line-height */
+    --lh16: 1.6; 
+    --lh12: 1.2; 
+
+    /* font-size*/
+    --fs14: 14px;
+    --fs15: 15px; 
+    --fs24: 24px;
+    --fs30: 30px;
+
+    /* Ширина полоски подчеркивания */
+     --w:3px; /*width  */
+
+     /* размеры img and icon*/
+    --w_img: 380px;
+    --h_img: 470px;
+    --w_labe: 34px;
+    --h_labe: 34px;
+    --h_input:40px;
+    --w_icon: 54px;
+    --h_icon: 54px;
+}
+
+/*общие*/
+body,div,header,main,footer,section,article,h1,h2,h3,p,a,ul,ol,li,address,img,form,input,span,figure,figcaption,cite{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    outline: none;   /*убирает рамки*/
+}
+
+
+body{
+    width: 100%;
+    height: 100%;
+} 
+
+.container{
+    width: 1200px;
+    margin: 0 auto;  /* отцентрировал блок*/
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+}
+                                                            /*header*/
+header{
+    min-height: 180px;
+}
+.nav-bar{
+    display: flex;
+    align-items: flex-end; /* отцентрировалаи по второстепеной оси*/
+    justify-content:space-between; /*растянули по сторона*/
+    min-height: 53px;
+}
+
+  
+.logo-mogo{
+    display: block;
+    font-size: var(--fs30);
+    font-family: var(--ffmb );
+    color:var(--color_main);
+    line-height: var(--lh16);
+    font-weight: bold;
+}
+.span{
+    text-transform:uppercase; /*Не очень как-то*/
+}
+
+.nav-link{
+  display: flex;
+  justify-content:	space-between;
+  min-width: 490px;
+  
+}
+
+.nav-link a{
+    display: block;
+    font-size: var(--fs14);
+    font-family: var(--ffmr);
+    color: var(--color_main);
+    line-height:    var(--lh12);
+    text-transform: uppercase;
+}
+.nav-link a:hover{
+    transition: color var(--hover_time) linear 0ms;
+    color: var(--color_hover);
+}
+.nav-link a::after{
+        content: "";
+        display:block;
+        transform: translateY(13px);
+        height: var(--w);
+        background-color:var(--color_hover);
+        opacity: 0;
+}
+.nav-link a:hover::after{
+    opacity: 1;
+    transition: opacity var(--hover_time) linear 0ms;
+}
+
+                                            /*main*/ 
+/*Heading  названия оглавлений*/
+.headings{
+display: flex;
+justify-content:	center;
+min-height: 180px;
+}
+.headings h2{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    align-content:	center;
+    font-size: var(--fs30);
+    font-family: var(--ffmb);
+    color: var(--color_h2p);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: var(--lh12);
+}
+ 
+.headings h2::after{
+    content: "";
+    display:block;
+    margin: 0 auto;
+    transform: translateY(40px);
+    width: 60px;
+    height: var(--w);
+    background-color:var(--color_hover); 
+}
+.headings span{
+    text-transform: lowercase;
+    font-weight: 400;
+    font-size: var(--fs24);
+    line-height: var(--lh12);
+    font-family: var(--ffks);
+    color: var(--color_h2p);
+    margin-bottom: 16px;
+}
+.headings span::first-letter{
+    text-transform: uppercase;
+}
+
+/*amazing sevices*/
+.amazing{
+    display: flex;
+    flex-direction:	column;
+    justify-content: flex-end;
+}
+.content-amazing{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-height: 330px;
+}
+.content-amazing .box{
+    flex: 0 0 380px;
+    
+}
+.box {
+    min-height: 70px;
+    margin-bottom: 94px;
+}
+.box h3{
+    display: block;
+    margin-left: 82px;    
+    font-size: var(--fs14);
+    font-family: var(--ffmr);
+    color:var(--color_h2p);
+    text-transform: uppercase;
+    line-height: var(--lh12); 
+    margin-bottom: 12px;
+}
+
+.box p{
+    margin-left: 82px;
+    font-size: var(--fs15);
+    line-height:var(--lh16);
+    font-family: var(--ffrr);
+    color: var(--color_p);
+    
+}
+.icon-cre::before, .icon-pho::before, .icon-web::before, .icon-seo::before, .icon-ch::before, .icon-dig::before{
+    content: "";
+    display: block;
+    float: left;
+    height: var(--h_labe);
+    width: var(--w_labe);
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translateX(20px);
+}
+
+.icon-pho::before{
+    background-image: url(../img/labe/ALARM.png);
+}
+.icon-cre::before{
+    background-image: url(../img/labe/COMPUTER\ _\ OK.png);
+}
+.icon-web::before{
+    background-image: url(../img/labe/LINE\ GRAPH.png);
+}
+.icon-dig::before{
+    background-image: url(../img/labe/digital.png);
+}
+.icon-seo::before{
+    background-image: url(../img/labe/BOOK\ 2.png);
+}
+.icon-ch::before{
+    background-image: url(../img/labe/HOME.png);
+}
+
+                        /*meet our team*/  
+
+.about-ous{
+    display: flex;
+    justify-content:center;
+    font-size: var(--fs15);
+    font-family: var(--ffrr);
+    color: var(--color_p);
+    line-height: var(--lh16);
+    text-align: center;
+    margin: 0 auto;
+    width: 980px;
+    margin-bottom: 60px;
+}
+
+.list-team{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items:	flex-start;
+    min-height: 625px; 
+    
+}
+
+.list-team li{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content:	center;
+    align-items:	center;
+    min-height: var(--h_img);
+    background:linear-gradient(to bottom ,var(--color_main) 470px, #fff 0);
+}
+
+.wrapper-meet{
+    margin-bottom: 30px;
+    transition:transform  var(--hover_time) linear 0ms; /* Получаеться это можно и указывать в класе не обезательно в hover*/
+}
+
+.wrapper-meet:hover{
+    transform: translate(-10px , -10px);
+}
+
+.list-team img{
+    display: block;
+    position: absolute;
+    width: var(--w_img);
+    height: var(--h_img);
+}
+
+.wrapper-meet:hover img{
+    transition: opacity  var(--hover_time) linear 0ms;
+    opacity: 0.1;
+}
+
+.soc_link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--w_img);
+    height: var(--h_img);
+    background:linear-gradient(
+        to top,
+        var(--color_lg),
+        var(--color_hover));
+}
+.wrapper-meet:hover a{
+    transition: z-index  var(--hover_time) linear 200ms;
+    z-index: 11;
+}
+.icon-f,.icon-i,.icon-p,.icon-t{
+    display: block;
+    width: var(--w_icon);
+    height: var(--h_icon);
+    margin-right: 1px;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow:1px 0 0 0 rgba(252, 227, 138 ,0.6);
+    background-color: var(--color_lg);
+}
+.icon-f:hover,.icon-i:hover,.icon-p:hover,.icon-t:hover{
+    box-shadow:1px 0 1px 0 rgba(148, 225, 211 ,0.6);
+    background-color: var(--color_main);
+    
+}
+.icon-f{
+    background-image: url(../img/icon/facebook.png);
+}
+.icon-i{
+    background-image: url(../img/icon/instagram.png);
+}
+.icon-p{
+    background-image: url(../img/icon/pinterest.png);
+}
+
+.icon-t{
+    background-image: url(../img/icon/twitter.png);
+}
+
+figcaption{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content:	center;
+    align-items:	center;
+    width: var(--w_img);
+}
+.list-team-figcaption{
+        font-size: var(--fs14);
+        font-family: var(--ffmr);
+        color: var(--color_h2p);
+        text-transform: uppercase;
+        
+        line-height: var(--lh12);
+        margin-bottom: 10px;
+}
+.list-team-city{
+    font-size: var(--fs15);
+    font-family: var(--ffrli);
+    color: var(--color_p);
+    font-style: italic;
+    line-height: var(--lh16);
+}
+.list-team-city::first-letter{
+    text-transform: uppercase;
+}
+/*footer*/
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 62px;
+    border-top: 1px solid rgb(204, 204, 204);
+}
+
+  
+.footer-text , .laaqiq{
+        font-size: var(--fs14);
+        font-family: var(--ffmr);
+        color: var(--color_h2p);
+        line-height: var(--lh12);
+}
+.footer-text::before{
+    content: "\00A9";
+    margin-right: 5px;
+}
+.laaqiq{
+    color: var(--color_hover);
+}
+
+.footer-form{
+    display: flex;
+    justify-content: flex-end;
+    align-items:	stretch;
+    width: var(--w_img);
+    min-height: var(--h_input);
+}
+input[type="email"]::placeholder , .footer-email{
+   font-size: var(--fs15);
+   font-family:  var(--ffrli);
+   color: var(--color_email);
+   font-style: italic;
+   line-height: var(--lh16);
+   text-align: left;
+}
+.footer-email{
+   flex-grow: 3;
+
+   border: 1px solid var(--color_email);
+   border-right: none;
+   color: var(--color_p);
+   padding-left: 12px;
+}
+.footer-botton{
+    flex-grow: 2;
+    height: var(--h_input);
+    border: 1px solid var(--color_main);
+    background-color: var(--color_main);
+
+    font-size:var(--fs14);
+    font-family: var(--ffmb);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: var(--lh12);
+    text-align: center;
+}
+
+   
+  
+  

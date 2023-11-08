@@ -1,0 +1,167 @@
+/*  MOBILE ONLY  */
+@media (max-width: 767px) {
+    .container {
+        max-width: 320px;
+    }
+
+    header {
+        background-image: url(../img/VSO_mob.jpg);
+        min-height: 540px;
+        background-position: 50% 50%;
+        background-size: 100% auto;
+    }
+
+    .logo {
+        padding-bottom: 35px;
+    }
+
+    .authorization {
+        padding-top: 20px;
+        margin-bottom: 128px;
+    }
+
+    .site-title {
+        font-size: 30px;
+        margin-bottom: 18px;
+    }
+
+    .site-sub-title {
+        padding-right: 35px;
+        padding-left: 35px;
+        font-size: 18px;
+        margin-bottom: 18px;
+    }
+
+    .partners-link {
+        width: 280px;
+    }
+
+    .partners {
+        padding-bottom: 50px;
+    }
+
+    .partners-title {
+        margin-bottom: 18px;
+    }
+
+    .partners-list-item {
+        margin-bottom: 28px;
+    }
+
+    .description {
+        padding-right: 38px;
+        padding-left: 38px;
+    }
+
+    .partners button {
+        width: 284px;
+    }
+}
+
+/*  TABLET AND DESKTOP  */
+@media (min-width: 768px) {
+    header {
+        min-height: 700px;
+    }
+
+    .authorization, .logo {
+        padding-top: 38px;
+        margin-bottom: 138px;
+    }
+
+    .site-title {
+        font-size: 52px;
+        margin-bottom: 25px;
+    }
+
+    .site-sub-title {
+        font-size: 24px;
+        margin-bottom: 32px;
+    }
+
+    .partners-link {
+        width: 226px;
+    }
+
+    .partners-title {
+        margin-bottom: 36px;
+    }
+
+    .partners button {
+        width: 197px;
+    }
+}
+
+/*  TABLET ONLY  */
+@media (min-width: 768px) and (max-width: 939px) {
+    .container {
+        max-width: 768px;
+    }
+    
+    header {
+        background-image: url(../img/VSO_tab.jpg);
+        background-position: 50% 50%;
+        background-size: 100% auto;
+    }
+
+    .site-title {
+        margin-right: -10px;
+        margin-left: -10px;
+    }
+
+    .partners {
+        padding-bottom: 40px;
+    }
+
+    .partners-list-item:nth-child(odd) {
+        margin-bottom: 56px;
+    }
+
+    .partners-list-item:nth-child(even) {
+        margin-bottom: 38px;
+    }
+
+    .description {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}
+
+/*  DESKTOP ONLY  */
+@media (min-width: 940px) {
+    .container {
+        max-width: 940px;
+    }
+    
+    header {
+        background-image: url(../img/VSO_desk.jpg);
+        background-position: 50% 50%;
+        background-size: auto;
+    }
+
+    .authorization {
+        justify-content: flex-end;
+        margin-right: -10px;
+        margin-left: -10px;
+    }
+
+    .logo {
+        text-align: left;
+        margin-right: -10px;
+        margin-left: -10px;
+    }
+
+    .partners {
+        padding-bottom: 70px;
+    }
+
+    .partners-list-item {
+        margin-bottom: 38px;
+    }
+}
+
+@media (min-width: 1440px) {
+    header {
+        background-size: 100% auto;
+    }
+}

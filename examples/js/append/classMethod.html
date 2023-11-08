@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class student {
+            constructor(name) {
+            this.name = name;
+            this.age = 21;
+        }
+         getName(){
+            return this.name;
+        }
+        setName(n){
+            this.name = n;
+        }
+        upAge(){
+            this.age+=1;
+        }
+        getAge(){
+            return this.age;
+        }
+
+        }
+        let st = new student("Petro");
+        console.log(st.name);
+        st.setName("Max");
+        console.log(st.getName());
+        st.upAge();
+        st.upAge();
+        console.log(st.getAge());
+    </script>
+</body>
+</html>

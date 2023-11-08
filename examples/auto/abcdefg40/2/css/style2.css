@@ -1,0 +1,25 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+p{
+    color:yellowgreen;
+    font-size: 20px;
+    text-decoration: underline;
+    margin-left: 120px;
+
+    border: 1px solid black;
+}
+b{
+    color:red;
+}
+
+div{
+    text-decoration: line-through;
+    padding-top: 500px;
+    border: 1px solid black;
+}
+*{
+    font-family: Verdana;
+}

@@ -1,0 +1,6 @@
+.down_menu{
+    height: 63px;
+    @include center-flex('ver')
+    justify-content: space-between;
+    box-shadow: 0px -1px #e5e5e5;
+}

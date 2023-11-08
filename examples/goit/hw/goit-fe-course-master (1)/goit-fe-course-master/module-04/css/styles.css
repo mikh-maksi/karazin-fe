@@ -1,0 +1,397 @@
+html{
+    box-sizing: border-box;
+    line-height: 1;
+}
+p
+*,
+*::before,
+::after{    
+    box-sizing: inherit;
+}
+/* обьявление переменых*/
+
+body{
+    width: 100%;
+    height: 100%;
+    
+} 
+/*общие*/
+body,header,main,footer,section,article,h1,h2,h3,p,a,ul,ol,li,address,img,div,input,span{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    outline: none;   /*убирает рамки*/
+}
+
+
+.container{
+    width: 1110px;
+    margin: 0 auto;  /* отцентрировал блок*/
+    padding: 0;
+}
+/*Header nav*/
+
+.nav-site{
+float: right;
+padding: 0;
+}
+
+.nav-site li{
+    float: left;
+    margin-right: 30px;
+
+    font-family: "Open Sans";
+    font-weight: bold;
+    list-style-type:none; /*убрали маркеры*/
+    font-size: 14px;
+    line-height: 32px;
+    font-weight: bold;
+
+}
+
+  
+.nav-site li:last-child{
+    margin-right: 0;
+}
+
+a{
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase; /*заглавные буквы*/
+    color: #000;
+    
+    outline: none;   /*убирает рамку на сылке*/
+}
+header{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.loge-mart{
+    float: left;
+    margin-bottom: 0;
+    padding: 0;
+
+    font-family: "Roboto Light",sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 32px;
+    color: #000;
+}
+.loge-mart::first-letter{
+    font-family: "Roboto Black",sans-serif;
+    color: rgb(26, 188, 156);
+}
+
+.nav-site a:hover,
+.nav-site a:focus{
+    color: rgb(26, 188, 156);
+  }
+/* для того чтобы теги чувствовали float*/
+.clearfix::after{
+      display: table;
+      content: "";
+      clear: both;
+  }
+
+/*Main*/
+main{
+    width: 100%;
+    min-width: 1100px;
+    max-width: 100%;
+}
+
+.section-color{
+    background-color: #e9f0fd;
+
+    padding-top: 64px;
+    padding-bottom: 100px;
+}
+/*banner*/
+.slider{
+    position: relative;
+    min-height: 600px;
+    overflow: hidden;
+    background-image:url("../img/brd.jpg");
+    background-repeat: no-repeat; /* не повторять*/
+    background-size: cover;/*определяем размер залили полностью всё */
+    background-position: center;/*от центрировали*/
+}
+.slider:hover{
+    background-image:linear-gradient(
+        to right ,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+        url("../img/brd.jpg"); 
+}
+/*------------ to do*/
+.pr{
+    position: relative;
+}
+
+.slider-link{
+    position: absolute;
+    top: 226px;
+
+    width: 100%;
+    margin: 0 auto;
+    width: 1110px;
+    height: 100px;
+    
+}
+/*left slider*/
+.slider-arrow{
+    background: url(../img/hover/icon-arrow-left.png) no-repeat center;
+    left: 0;
+}
+
+.slider-arrow2{
+    background: url(../img/hover/icon-arrow-right.png) no-repeat center;
+    right: 0;
+}
+
+.slider-arrow,
+.slider-arrow2{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    border: none;
+}
+
+.slider-arrow::before,
+.slider-arrow2::before {
+    position: absolute;
+    font-size: 100px;
+    color: rgb(255, 255, 255);
+    line-height: 0.11;
+}
+
+.slider-arrow:hover,
+.slider-arrow2:hover{
+    background-color:#4ec6ab;
+}
+/* canter  slider*/
+
+
+.slider-arrow1{
+    position: absolute;
+    left: 180px;
+    top: -26px;
+    width: 784px;
+}
+
+.slider-arrow1 h3{
+    color: #fff;
+}
+
+.slider-arrow1 a{
+    float: left;
+    color: #fff;
+}
+.slider-arrow1 a:hover,
+.slider-arrow1 h3:hover{
+    color:#ff7200 ;
+}
+.slider-arrow-center{
+        position: absolute;
+        padding: 0;
+        font-size: 24px;
+        line-height: 54px;
+        font-family: "Roboto Light";
+}
+.slider-arrow-a{
+        font-size: 60px;
+        line-height: 82px;
+        
+        font-family: "Roboto Black";
+}
+
+.slider-arrow1 li{
+    float: left;
+}
+
+
+.slider-arrow-center a:not(:last-child)::after{
+     content: "\2044";
+     margin-right: 2px;
+     color: #fff;
+}
+
+        
+        
+
+/*new collection*/
+
+section h2 {
+    
+    margin-bottom:80px;
+    font-size: 48px;
+    font-family: "Roboto Black",sans-serif;
+    color: rgb(81, 81, 81);
+    text-transform: uppercase;
+    line-height: 100px;
+    text-align: center;
+
+}
+section h2::after{
+    display:block;
+    margin: 0 auto;
+    width: 170px;
+    height: 7px;
+    content: "";
+    background-color:#4ec6ab; 
+}
+
+
+
+/*featured products */
+
+.featured{
+    position: relative;
+    float: left; 
+
+    margin: 0;
+    padding: 0;
+    margin-right: 30px;
+
+    width: 255px;
+    height: auto;
+    background: linear-gradient(to right ,#000 78%, #8c8c8c 22%);
+}
+.featured:hover ,
+.featured:focus {
+    background: linear-gradient(to right ,#1abc9c 78%, #7fd9c7 22%);
+}
+
+.featured:nth-child(4n+1){
+    margin-right: 0px;
+}
+
+.featured img{
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 255px;
+    height: 284px;
+}
+
+.featured p,
+.featured a{
+    padding:0;
+    margin: 0; 
+    
+    text-align: left;/* горизонтальное выравнивание текста  */
+    line-height: 40px;/* горизонтальное выравнивание текста  */
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+  }
+
+.featured a {
+    float: left;
+    margin-left: 13px;
+}
+
+.featured p{
+    position: absolute;
+    right: 15px;
+}
+
+.featured p::before{
+    content:"\0024";
+}
+/*featured input*/
+.featured-input{
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 235px;
+    height: 264px;
+    z-index: -1;
+    border: 10px solid rgba(255, 255, 255, 0.808);
+    background-image:linear-gradient(to right ,rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35));
+}
+.featured-input a{
+    margin-left: 0;
+}
+.featured:hover .featured-input{
+    z-index: 15;
+}
+
+.input1,.input2, .input3, .input4{
+    position: absolute;
+    background-color: transparent;
+    outline: 1px solid #fff;
+    border: none;
+
+    font-size: 18px;
+    line-height: 40px;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+}
+.input1:hover,.input2:hover, .input3:hover, .input4:hover{
+    background-color: rgb(26, 188, 156);
+}
+.input1,.input2, .input3{
+    width: 50px;
+    height: 50px;
+    bottom: 132px;
+}
+.input1{
+    left: 35px;
+    background: url(../img/hover/live.png) no-repeat center;
+}
+
+.input2{
+    left: 94px;
+    background: url(../img/hover/arow.png) no-repeat center;
+}
+
+.input3{
+    left: 152px;
+    background: url(../img/hover/time.png) no-repeat center;
+}
+
+.input4{
+    font-size: 14px;
+    font-family: "OpenSans";
+    line-height:   32px;
+    text-align: center;
+    background: url(../img/hover/telega.png) no-repeat  12px 10px ;
+
+    bottom: 75px;
+    left: 35px;
+    width: 168px;
+    height: 50px;
+    
+    padding-left: 50px;
+}
+ 
+/*footer*/
+footer{
+    width: 100%;
+    height: 90px;
+    background-color: rgb(50, 50, 50);
+}
+.footer-bar {
+    padding-top: 36.5px;
+    font-size: 16px;
+    font-family: "OpenSans Regular", sans-serif;
+    color: rgb(254, 254, 254);
+    line-height: 28px;
+    text-transform: capitalize;
+    text-align: center;
+  }
+
+.address-span{
+    color: rgb(26, 188, 156);
+    text-transform: capitalize;
+}
+
+

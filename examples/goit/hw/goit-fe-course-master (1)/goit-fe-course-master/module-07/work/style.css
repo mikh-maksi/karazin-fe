@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    margin: 0 auto;
+}
+
+.el1 {
+    background: red;
+    height: 12vh;
+    width: 60vw;
+    min-width: 600px;
+    color: white;
+}
+
+.el2 {
+    background: blue;
+    height: 60vh;
+    width: 60vw;
+}
+
+.el3 {
+    background: lightgreen;
+    height: 30vh;
+    width: 60vw;
+}
+
+table td,
+table th {
+    border: 1px solid black;
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+#id_email:valid {
+    outline: dashed green;
+}
+
+#id_email:invalid {
+    outline: dashed red;
+}

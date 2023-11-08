@@ -1,0 +1,11 @@
+.common-rule {
+    list-style: upper-roman;
+    font-size: 20px;
+  }
+  
+  .first-rule{
+    color:red;
+  }
+  .last-rule{
+    color:green;
+  }

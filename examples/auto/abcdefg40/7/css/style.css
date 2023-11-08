@@ -1,0 +1,17 @@
+.btn {
+    border: none;
+    padding: .25rem 1.25rem;
+  }
+  
+  .link {
+    text-decoration: none;
+    color: navy;
+  }
+  /* Напиши свой код под этой строкой */
+  .btn.active {
+    color: red;
+  }
+  
+  .link.active {
+    font-weight: 700;
+  }

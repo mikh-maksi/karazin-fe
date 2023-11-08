@@ -1,0 +1,11 @@
+.template_by{
+    @include font-settings(14px, 1.2)
+    font-family: $font-family-Montserrat;
+    color: $accent-color-title;
+    
+    & span{
+        color: #f6a1a1;
+    }
+
+}
+

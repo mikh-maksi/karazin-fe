@@ -1,0 +1,21 @@
+.logo__link {
+    @extend %link;
+    @include font-settings(30px, 1.2) font-family: $font-family-Montserrat;
+    color: $accent-color-white;
+    font-weight: bold;
+}
+
+@keyframes logo {
+    0% {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(0);
+        opacity: 1;
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

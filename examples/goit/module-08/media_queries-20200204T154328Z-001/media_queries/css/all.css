@@ -1,0 +1,9 @@
+body{
+	background: #EE66AA;
+}
+article{
+	border:1px solid black;
+}
+#text{
+	font-size:48px;
+}

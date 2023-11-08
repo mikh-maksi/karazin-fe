@@ -1,0 +1,22 @@
+body {
+    padding: 2rem;
+}
+
+#svg {
+    display: none;
+}
+
+.icons-container {
+    text-align: center;
+}
+
+.icon {
+    width: 8rem;
+    height: 8rem;
+    cursor: pointer;
+    fill: #1EA896;
+}
+
+.icon:hover {
+    fill: #FF715B;
+}

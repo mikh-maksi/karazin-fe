@@ -1,0 +1,307 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html { box-sizing: border-box; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* roboto-300 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'),
+       url('../fonts/roboto-v20-latin-300.eot?#iefix') format('embedded-opentype'), 
+       url('../fonts/roboto-v20-latin-300.woff2') format('woff2'), 
+       url('../fonts/roboto-v20-latin-300.woff') format('woff'), 
+}
+
+/* montserrat-700 - latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  
+  src: local('Montserrat Bold'), local('Montserrat-Bold'),
+       url('../fonts/montserrat-v14-latin-700.eot?#iefix') format('embedded-opentype'), 
+       url('../fonts/montserrat-v14-latin-700.woff2') format('woff2'), 
+       url('../fonts/montserrat-v14-latin-700.woff') format('woff'), 
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.container {
+  width: 320px;
+  padding: 0 10px;
+  margin: auto;
+}
+
+/* header */
+.wrp {
+  background-image: url(../img/background_desctop.png);
+  background-color: rgb(26, 25, 21);
+  background-size: cover;
+  height: 540px;
+  background-position: center center;
+}
+
+.page-header {
+  padding-top: 20px;
+}
+
+.logo_tablet {
+  display: none;
+}
+
+.authorization {
+  display: flex;
+  width: 200px;
+  margin: auto;
+  margin-bottom: 100px;
+}
+
+.logo a {
+  display: block;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+}
+
+.authorization button {
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  line-height: 1.2;
+  background-color: transparent;
+  cursor: pointer;
+  width: 98px;
+  height: 40px;
+  border: solid 1px transparent;
+}
+
+.authorization button:hover,
+.authorization button:focus {
+  border-radius: 20px;
+  text-align: center;
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb(255, 255, 255);
+  width: 98px;
+  height: 40px;
+}
+
+/* section holiday */
+.holiday {
+  margin-bottom: 146px;
+}
+
+.title {
+  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.subtitle {
+  display: block;
+  font-size: 18px;
+  font-family: "Roboto Light", sans-serif;
+  color: rgb(255, 255, 255);
+  line-height: 1.2;
+  width: 220px;
+  text-align: center;
+  margin: 0 auto 10px;
+}
+
+.find {
+  display: block;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  line-height: 1.2;
+  border: none;
+  border-radius: 20px;
+  background-color: rgb(255, 78, 80);
+  width: 280px;
+  height: 40px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+/* section partner */
+.partner {
+  display: block;
+  padding-top: 72px;
+  padding-bottom: 56px;
+}
+
+h2 {
+  font-size: 22px;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(51, 51, 51);
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center; 
+  margin-bottom: 22px;
+}
+
+h3 {
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(51, 51, 51);
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.img {
+  border-radius: 50%;
+}
+
+.team li {
+  list-style: none;
+  text-align: center;
+}
+
+.team li:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.card {
+  display: inline-block;
+  position: relative;
+}
+
+.hunter::before {
+  content: '';
+  background-image: url(../img/icons/tv.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  border-style: solid;
+  border-width: 4px;
+  border-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  width: 37px;
+  height: 37px;
+  bottom: 0;
+  right: 0;
+  background-color: rgb(255, 78, 80);
+}
+
+.marsha::before {
+  content: '';
+  background-image: url(../img/icons/Flasche.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  border-style: solid;
+  border-width: 4px;
+  border-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  width: 37px;
+  height: 37px;
+  bottom: 0;
+  right: 0;
+  background-color: rgb(255, 165, 7);
+}
+
+.walker::before {
+  content: '';
+  background-image: url(../img/icons/Tee.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  border-style: solid;
+  border-width: 4px;
+  border-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  width: 37px;
+  height: 37px;
+  bottom: 0;
+  right: 0;
+  background-color: rgb(28, 215, 173);
+}
+
+.hunter-girl::before {
+  content: '';
+  background-image: url(../img/icons/telegram.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  border-style: solid;
+  border-width: 4px;
+  border-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  width: 37px;
+  height: 37px;
+  bottom: 0;
+  right: 0;
+  background-color: rgb(78, 115, 219);
+}
+
+.team-card {
+  width: 230px;
+  margin: 0 auto;
+}
+
+.team-text {
+  font-size: 14px;
+  font-family: "Roboto Light", sans-serif;
+  color: #808080;
+  line-height: 1.2;
+  width: 92%;
+}
+
+.download-partners {
+  display: block;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(255, 78, 80);
+  font-weight: bold;
+  line-height: 1.2;
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb(255, 78, 80);
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255);
+  width: 284px;
+  height: 44px;
+  cursor: pointer;
+  margin: 30px auto 0;
+}
+
+.team > .a {
+  order: 0;
+}
+.team > .b {
+  order: 1;
+}
+.team > .c {
+  order: 2;
+}
+.team > .d {
+  order: 3;
+}
+
+

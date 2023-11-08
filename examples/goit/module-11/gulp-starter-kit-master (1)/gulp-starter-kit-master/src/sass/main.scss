@@ -1,0 +1,37 @@
+/*
+ * Все паршалы импортировать в этот файл
+ */
+@import 'helpers/variables.scss';
+@import 'helpers/placeholders.scss';
+@import 'helpers/mixins.scss';
+@import 'normalize.scss';
+@import 'base.scss';
+
+// components
+
+// header
+@import 'components/container.scss';
+@import 'components/background_image.scss';
+@import 'components/navigation.scss';
+@import 'components/logo_link.scss';
+// main title
+@import 'components/main_title.scss';
+@import 'components/button_learn_more.scss';
+// main
+// amazing services
+@import 'components/amazing_services.scss';
+@import 'components/list_work.scss';
+// meet our team
+@import 'components/meet_our_team.scss';
+@import 'components/list_hover.scss';
+@import 'components/team_list.scss';
+@import 'components/list_socials.scss';
+@import 'components/about_worker.scss';
+// footer
+@import 'components/down_menu.scss';
+@import 'components/template_by.scss';
+@import 'components/input.scss';
+@import 'components/button_down_menu.scss';
+
+
+

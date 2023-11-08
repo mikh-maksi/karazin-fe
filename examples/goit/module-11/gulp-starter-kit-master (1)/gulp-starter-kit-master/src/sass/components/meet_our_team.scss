@@ -1,0 +1,45 @@
+.meet_our_team{
+    margin-bottom: 80px;
+}
+
+.meet_our_team_title{
+    margin: 0;
+    padding: 0;
+    @include font-settings(30px, 1.2)
+    font-family: $font-family-Montserrat;
+    color: $accent-color-title;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 65px;
+}
+
+.meet_our_team_title__add{
+    display: block;
+    text-transform: initial;
+    @include font-settings(24px, 1.2)
+    font-family: $font-family-Kaushan;
+    color: $accent-color-title;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: lighter;
+}
+
+.meet_our_team_title::after{
+    @include pseudo(block, '')
+    margin: 0 auto;
+    width: 60px;
+    height: 3px;
+    background-color: $color-after_title;
+    margin-top: 40px;
+}
+
+.meet_our_team__about{
+    margin: 0;
+    padding: 0;
+    @include font-settings(15px, 1.6)
+    font-family: $font-family-Roboto;
+    color: $worker-text-color;
+    text-align: center;
+    margin-bottom: 85px;
+}

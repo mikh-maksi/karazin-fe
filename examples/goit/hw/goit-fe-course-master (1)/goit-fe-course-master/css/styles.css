@@ -1,0 +1,392 @@
+html{
+    box-sizing: border-box; /*елемент будет пытаться вметстить весь контэнт в нутри а не раширяться*/
+    line-height: 1;
+}
+
+*,
+*::before,
+::after{    
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+body{
+    height: 100%;
+    margin: 0 auto;
+  
+    font-family: 'Open Sans Bold', sans-serif; 
+    font-size: 14px;
+   
+}
+
+a,
+a:hover ,/*для стилизации только тех ссылок, на которые пользователь навёл.*/
+a:visited,/*для стилизации только тех ссылок, на которые пользователь нажал.*/
+a:link{             /*для стилизации ссылок, на которые пользователь ещё не нажимал.*/
+    color:  rgb(20, 1, 1);
+    width: 10px;
+    line-height: 24px;
+    margin-right: 10px; 
+    margin-bottom: 10px;
+     text-decoration: none;/*убрать подчеркивание*/    
+     outline: none;   /*убирает рамку на сылке*/
+     cursor: pointer;/*появляеться рука при наведений на кнопку http://htmlbook.ru/css/cursor*/
+     outline: 1px solid rgb(240, 171, 21);
+    
+}
+
+h1,
+.footer,
+.link-modules{
+     text-align: center;/*vспользуется для выравнивания строки текста или строчных и строчно-блочных элементов внутри блочного элемента по ширине относительно его границ.*/
+}
+li  {
+    display: inline-block;
+    list-style-type: none;
+}
+a,h1,p,section,article,header,main,footer,h2,h3,h4,span,img,ul,ol,li,div{
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+/* прижали footer  к низу http://dimox.name/press_footer_bottom_with_css/*/
+.content {
+	min-height: calc(100vh - 80px);
+}
+
+
+.footer-link {
+margin: 0 auto;
+font-size: 30px;/*указывает размер шрифта*/
+font-weight: 700;/*указывает "вес" (жирность начертания) шрифта*/
+font-style: italic; /*указывает стиль начертания шрифта*/
+text-indent: 20px;/*указывает отступ первой строки в абзаце*/
+text-align: center;/* выравнивание текста*/
+line-height: 24px;/*управляет межстрочным интервалом*/
+font-family: serif;/*указывает семейство шрифтов*/
+padding: 0 ;/* делаем внутрений отступ*/
+margin: 1%;/* делаем внешний отступ*/
+text-decoration: none;/*указывает декорирование шрифта*/
+background-color:transparent;/*задает цвет фону*/
+text-transform: uppercase; /*преобразованием текста элемента в заглавные или прописные символы*/
+}
+.white{
+ white-space: nowrap; /* Отменяем переносы текста */
+ width: calc(30% - 4px);/* Ширина текстового блока */
+ width: 300px; /* Ширина блока */
+ width:auto; /*Устанавливает ширину исходя из типа и содержимого элемента.*/
+ width:inherit; /*Наследует значение родителя.*/
+}
+/*полностроничный фон*/
+body {
+background-image: url();/*позволяет задать фону изображение по url*/
+background-repeat: no-repeat;/*по умолчанию заполняет фон копиями no-repeat, repeat-x, repeat-y и repeat*/
+background-size: cover;/*определяет размеры фонового изображения в контейнере, использует абсолютные(px), относительные единицы(%) и ключевые слова (cover, contain),100% auto;*/
+background-position: center;/*	задает положение изображения относительно границ блока*/
+min-height: 100vh;/*Для того чтобы заполнить экран фоном полностью, и при этом не зависеть от количества контента*/
+background-attachment:scroll;/*определяет поведение фонового изображения при прокрутке содержимого с помощью local, fixed и scroll  */
+background-clip:1; /* обрезка фона Изменяет границу распространения фона для box-model. Обрезает фон до заданной области.
+По умолчанию фон включает content-area, padding и border. Можно уменьшить, вплоть до content-area.*/
+background-origin:2;/* границы фона Изменяет границу распространения фона для box-model. Изменяет размер фона до заданной области.
+По умолчанию фон включает content-area, padding и border. Можно уменьшить, вплоть до content-area.*/
+background-color: rgba(245, 245, 18, 0.3);
+background-color: transparent;/* делает просразчный фон*/
+}
+.border{
+    border-collapse:collapse;/* — слияние рамки*/
+    border-color:rgb(20, 1, 1); /*— цвет рамки*/
+    border-image:url();/* — графическая рамка*/
+    border-image-outset:1px;/* — выступ графической рамки*/
+    border-image-repeat:round;/* — повторение графической рамки*/
+    border-image-slice:2px;/* — разбивка графической рамки*/
+    border-image-source:none;/* — адрес изображения для графической рамки*/
+    border-image-width:2px;/* — толщина графической рамки*/
+    border-radius:2%;/* — скругление рамки*/
+    border-style:2%;/* — стиль рамки*/
+    border-width:2%;/* — ширина рамки*/
+
+    outline: 1px solid black;   /* тоже самое чт ои border  но рамка идёт в нутрь*/
+}
+.border-box{
+    box-sizing: border-box;/*Разсширение идёт в размера блока (задвар размер блока он не увеличиться)*/
+    box-sizing: content-box;/*Разсширение идёт от размера блока */
+    box-sizing:padding-box;/*Свойства width и height включают в себя значения полей, но не отступов (margin) и границ (border).*/
+
+}
+/**/
+.display{
+    display: inline-block; /*такие элементы являются встроенным, но для них можно задавать поля, отступы, ширину и высоту.*/
+    display: inline;/*элементы, которые генерируют внутристрочные контейнеры*/
+    display: block;/*элементы, которые форматируются визуально как блоки*/
+}
+
+.float{
+    float: left;
+    clear: both; /*убрать обтикание*/
+}
+/*применяеться для всего css*/
+:root{
+--w:200px;
+}
+.calc{
+    display:inline-block;
+    width: calc(var(--w) - 30px);  /*calc  используеться для вычеслений*/
+    height: 1px;
+    background-color: black;
+}
+.input-buttom{
+    position: absolute;
+    cursor: pointer;/*показывает что на кнопк можно жмакать по всему блоку  (например lebal */
+    background-color: transparent;/* делает просразчный фон*/
+}
+/* для того чтобы теги чувствовали float*/
+.clearfix::after{
+    display: table;
+    content: "";
+    clear: both;
+}
+/* прячим отоброжение слов в иконках навигаций*/
+.visualyy-hidden:not(:focus):not(:active),
+input[type="checkbox"].visualyy-hidden,
+input[type="radio"].visualyy-hidden{
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+.div{
+    width:399px;
+    height:200px;
+    margin:auto;
+    box-shadow: 2px 2px 5px 5px hsla(0,0%,0%,0.5);
+    background: 
+      linear-gradient(100deg,
+    hsla(0,0%,0%,0),
+    hsla(0,0%,0%,0.5) 30%,
+    hsla(0,0%,0%,0.9)),
+      url(https://elle.ua/i/publications/48/355_200/vizov-prinyat-kak-ubrat-rasshirennie-kapillyari-na-lice-1838-27883.jpg);
+    background-size: cover; /*растягивать*/
+
+  }
+.div:hover{
+    background: url(https://images.weserv.nl/?q=85&url=https://nv.ua/system/Article/posters/002/122/838/600x300/67029f6374dfd4ca117f7310ee408b42.jpeg?stamp=20191212135025);
+    transform: translateX(380px) rotate(3deg); /*https://developer.mozilla.org/en-US/docs/Web/CSS/angle*/
+    
+  }
+
+.transform{
+    transform:matrix();/*Задаёт матрицу преобразований. http://htmlbook.ru/blog/matritsa-preobrazovanii*/
+
+    transform-origin: center;/* cдвигает точки отсчета оси X and Y*/
+
+    transform: translateX(380px);/*Сдвигает элемент по горизонтали на указанное значение. Положительное значение сдвигает вправо, отрицательное влево.*/
+    transform: translateY(380px);/*Сдвигает элемент по вертикали на указанное значение. Положительное значение сдвигает вниз, отрицательное вверх.*/
+    transform: translateZ(380px);/*cдвиг по аси Z*/
+    transform: translate(50% ,50%);/*Сдвигает элемент на заданное значение по горизонтали и вертикали.*/
+    transform: translate3d(50% ,50% ,50%);/*cдвиг по аси X и Y и Z*/
+
+    transform: rotateX(3deg);/*Поворот по вертекали*/
+    transform: rotateY(3deg);/*Поворот по горезонтале*/
+    transform: rotateZ(3deg);/*Поворот*/
+    transform: rotate(3deg); /*Поворот элемента на заданный угол относительно точки трансформации, задаваемой свойством transform-origin.*/
+    transform: rotate3d(3deg,3deg,3deg);/*поворот по аси X и Y и Z*/
+    
+    
+    transform: skewX(60deg);/*Наклоняет элемент на заданный угол по вертикали.*/
+    transform: skewY(60deg);/*Наклоняет элемент на заданный угол по горизонтали.*/
+    transform: skew(60deg ,360deg);/**/
+    
+    transform: scale(1.1,-1.5); /*Масштаб элемента по горизонтали и вертикали.*/
+    transform: scale3d(1,1,1);/**/
+    transform: scaleX(1);/*Масштабирует элемент по горизонтали.*/
+    transform: scaleY(1);/*Масштабирует элемент по вертикали.*/
+    transform: scaleZ(1);/**/
+
+    /*Короткая запись . Выполняются действия с лева на права по очереди !*/
+    transform: translateX(380px) rotate(3deg) skewX(60deg);
+
+}
+.transition{
+    transition-property: all;/* Задаётся название СSS-свойств к которым будет применяться эфект перехода Может содержать список свойств через запятую */
+    transition-duration: 3s; /* время для аннимцией*/
+    transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);/*https://cubic-bezier.com*/
+    transition-timing-function:steps(60, end);/*Свойство задаёт временную функцию, которая описывает скорость перехода объекта от одного значения к другому. Задается функцией Безье.*/
+    transition-delay: 0ms;/*задержка перед началом анимаций*/
+}
+
+/*Animation  https://webref.ru/css/keyframes*/
+@keyframes anim {  /*Уникальная переменная, которая связывает @keyframes с animation, через это свойство настраивается время анимации и другие её параметры */
+/*Вместо ключевых слов from и to можно использовать, соответственно, 0% и 100%*/
+    from{} /*Первый ключевой кадр, аналогичен 0%.*/
+    50%{}
+    to{} /*Последний ключевой кадр, аналогичен 100%. */
+}
+
+.animation{
+    animation-name: anim;
+    animation-duration: 60s;/* время для аннимцией*/
+    animation-timing-function:steps(60, end);/*определяет изменение скорости от начала до конца анимации с помощью временных функций. https://webref.ru/css/animation-timing-function */
+    animation-delay:2s;/* задает задержку анимации.*/
+    animation-iteration-count: infinite;/*задержка перед началом анимаций (безконечный повтор)*/
+    animation-direction:alternate;/*задает направление повтора анимации*/
+    animation-fill-mode:forwards; /*определяет порядок применения определенных в @keyframes стилей к объекту.*/
+    animation: anim 2s ease-in-out 2 alternate 5s forwards; /*Краткая запись*/
+}
+.animation:hover{
+    animation-play-state: paused; /*Пауза анимации*/
+}
+
+/*--------------*/
+.opacity{
+    opacity: 0.1; /* данные будут становиться прозрачными*/
+}
+
+.display-flex{
+    display:flex;/* задает flex-контейнер c элементами block  */
+    display:inline-flex;/*	задает flex-контейнер c элементами inline-block*/
+     
+    order: 6;  /*ззадаём номер одельному элементу и упровляем пложением */
+
+    flex-grow: 3;/*Определят пропорцию значения width элемента flex контейнера,
+    которая будет рассчитана за счет удаления свободного пространства*/
+
+    flex-shrink:0;/*Определят пропорцию значения width элемента flex контейнера,
+     которая будет рассчитана за счет ширины других элементов 
+     чем выше значение flex-shrink - тем меньше ширина элемента.*/
+
+    flex-basis:20px;/*Определяет ширину элемента до применения flex-grow и flex-shrink*/
+
+    /*удобное сокращение для flex-grow + flex-shrink +flex-basis */
+
+        flex: 3 0 20px;
+ 
+    /*определяет старт отоброжения элементов*/
+
+    flex-direction:	row ;/*(default)	задает горизонтальный порядок элементов слева направо*/
+    flex-direction:row-reverse;/*	задает горизонтальный порядок элементов справа налево*/
+    flex-direction:	column;/*	задает вертикальный порядок элементов сверху вниз*/
+    flex-direction:	column-reverse;/*	задает вертикальный порядок элементов снизу вверх*/
+
+    /*запрещает перенос элементов*/
+    flex-wrap:	nowrap;/* (default)	запрещает перенос элементов из основной оси*/
+    flex-wrap:	wrap;	/*разрешает перенос элементов из основной оси на новую строку*/
+    flex-wrap:	wrap-reverse;	/*разрешает перенос элементов из основной оси на новую строку (обратный порядок строк)*/
+
+    /*удобное сокращение для flex-direction + flex-wrap*/
+
+    flex-flow: column wrap;/*удобное сокращение для flex-direction + flex-wrap*/
+
+    /* для выравнивания по main*/
+
+    justify-content:	flex-start;/* (default)	элементы выравниваются от начала главной оси*/
+    justify-content:	flex-end;/*	элементы выравниваются от конца главной оси*/
+    justify-content:	center;/*	элементы выравниваются по центру главной оси*/
+    justify-content:	space-between;/*	элементы выравниваются по главной оси, расстояние между каждой парой смежных элементов одинаково. Края сливаются с границей первого и последнего элемента.*/
+    justify-content:	space-around;/*	элементы выравниваются по главной оси, расстояние между каждой парой смежных элементов одинаково. Отступ по краям равен половине интервала между каждой парой смежных элементов.*/
+    justify-content:	space-evenly;/*	элементы выравниваются по главной оси, c равным интервалом, расстояние между каждой парой смежных элементов и краями одинаково.*/
+
+    /* для выравнивания по cross*/
+
+    align-items:	stretch;/*	Значение по умолчанию. Элементы растягиваются так, чтобы занять всю высоту строки*/
+    align-items:	flex-start;/*	элементы выравниваются от начала cross axis*/
+    align-items:	flex-end;/*	элементы выравниваются от конца cross axis*/
+    align-items:	center;/*	элементы выравниваются по центру cross axis*/
+    align-items:	baseline;/*	элементы выравниваются по baseline текста, расположенного в элементах*/
+    /*Свойство, позволяющее изменить правило align-items для отдельного элемента.Выравнивает по поперечной оси cross*/
+    align-self:flex-end;
+    align-self:flex-start;
+    align-self:center;
+
+
+    /*Это свойство работает только если главная ось состоит из более чем одной строки. 
+    Другими словами, если flex-wrap: wrap или flex-wrap: wrap-reverse привели к переносу строк.
+     вертикали */
+
+    align-content:	stretch;/*	Значение по умолчанию. Строки растягиваются так, чтобы занять всю площадь cross axis*/
+    align-content:	flex-start;/*	строки выравниваются от начала cross axis*/
+    align-content:	flex-end;/*	строки выравниваются от конца cross axis*/
+    align-content:	center;/*	строки выравниваются по центру cross axis*/
+    align-content:	space-between;/*	строки выравниваются вдоль cross axis так, чтобы крайние строки прижимались к краям, а свободное место распределялось равными частями между собой.*/
+    align-content:	space-around;/*	строки выравниваются вдоль cross axis так, чтобы свободное место распределялось равными частями между собой, а крайние строки имели расстояние к краям равным половине от межстрочного расстояния.*/
+    
+    
+}
+.filter:checked + .nextFilter { /*+   говорит чтобы выбрали следующий илемент за ним nexfileter*/}
+.filter:checked > .nextFilter { /*>  говорит чтобы выбрали следующий первый элемент  nexfileter */}
+.profile-form input[type="checkbox"]:checked{/* valid  прошёл валидацию */}
+.profile-form input[type="email"]:valid{/* valid  прошёл валидацию */}
+.profile-form input[type="email"]:invalid{ /*invalid  не прошел валидацию*/}
+.profile-form input[type="email"]::placeholder{ /*placeholder */}
+/* atribut  fill="#fff"    - в svg документе поминяет цвет иконки*/
+
+/* Custom CHECKBOX */
+.castom-list label{}
+.castom-list label::before{/*оформляем тут что будет вывобить заместь квадратика в чекбоксе*/}
+.castom-list input[type="checkbox"]:checked + label::before{/* Если в выброном состояние  то взять бефор следующего элемента лафйб*/}
+
+.width{
+    width: 100vh; /* размер на весь экран*/
+    width: 100%;
+    width: 100rem; /*размер зависит от html font-size: 16px; - 16px-размер по умолчанию ( 1rem =  16px) */
+    width: 100em; /*размер зависит от  размера ближайшего предка font-size: ; в теге <div> ( 1.5em = font-size * 1,5 ) */
+    line-height: 1.3 ;/* размер берется font-size (лучше записывать 1.2  а не px ,% ,rem) */
+    font-family: monospace; /* шрифт для  отоброжения кодов на страницк*/
+}
+
+
+/* --------------------------       atribut  fill="#fff"    - в svg документе поминяет цвет иконки*/
+
+/* media https://dev.opera.com/articles/responsive-images/ */
+
+
+/* 
+and - связывает между собой разные условия. Код ниже сделает так, 
+что левая колонка будет окрашиваться в желтый цвет в диапазоне 400px - 800px.
+
+not - позволяет сработать медиазапросу в противоположном случае.
+ Ключевое слово not добавляется в начало медиазапроса и применяется ко всему запросу целиком. */
+
+@media screen and (min-width: 400px) and (max-width: 800px) {
+    .left-sidebar {
+      background-color: #FE5F55;
+    }
+  }
+  
+  @media not screen and (min-width: 400px) and (max-width: 800px) {
+    .right-sidebar {
+      background-color: #FE5F55;
+    }
+  }
+
+
+
+/* для мобильных когда переворачиваться гаджет */
+/* Для резиновгог осайта размеры узнаються 
+ 300/960*100%= 31.3% 
+ Где 300 - размер блока  960px  размер контейнера в котором блок находиться  а 100% чтобы понять сколько процентов в блоке от общей велечены 
+ --blox:300px;
+ --conteiner:960px;
+ --width: var(--blox) / var(--conteiner) * 100%   */
+@media screen and (orientation: landscape) {/*Горизонтальная (landscape)*/}
+@media screen and (orientation: portrait) { /*Вертикальная (portrait)*/}
+@media (device-pixel-ratio: 2) {}
+@media (min-device-pixel-ratio: 1) {}
+@media (max-device-pixel-ratio: 3) {}
+@media screen and (min-width: 320px) {/* Мобильные телефоны с узким экраном */}
+@media screen and (min-width: 480px) {/*Современные смартфоны среднего\высокого уровня*/} /* пока размер 480px  будет применяться это правило*/
+@media screen and (min-width: 768px) {/* планшет */}/* после достижения 580px  может меняться действия*/
+@media screen and (min-width: 960px) {/* большой планшет  */}
+@media screen and (min-width: 1200px) {/* Ноутбуки */}
+@media screen and (min-width: 1440px) {/*Десктопы */}
+

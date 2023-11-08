@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    height: 200px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.left-sidebar,
+.right-sidebar {
+    width: 25%;
+}
+
+.left-sidebar {
+    background-color: #EDCBB1;
+}
+
+.right-sidebar {
+    background-color: rgb(246, 243, 34);
+}
+
+.content {
+    width: 50%;
+    background-color: #6D98BA;
+    font-size: 26px;
+}
+
+
+/* min-width: - это означает "больше ширины 768" */
+
+
+/* Больше одного и меньше второго  */
+
+@media (min-width: 768px) {
+    .left-sidebar {
+        background-color: #F0386B;
+    }
+    .right-sidebar {
+        background-color: #6F2DBD;
+    }
+    .content {
+        font-size: 14px;
+    }
+    .dfdf {
+        font-size: 12px;
+    }
+}
+
+@media (min-width:1200px) {
+    .left-sidebar {
+        background-color: #F0386B;
+    }
+    .right-sidebar {
+        background-color: #6F2DBD;
+    }
+    .content {
+        font-size: 14px;
+    }
+}

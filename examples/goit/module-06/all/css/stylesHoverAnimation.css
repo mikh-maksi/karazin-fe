@@ -1,0 +1,171 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Montserrat", "Arial", sans-serif;
+    color: rgb(51, 51, 51);
+    font-weight: 400;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* SERVICE-ITEM FINISH     
+   SERVICE-LIST FINISH     
+  SECTION SERVICE FINISH   
+---------------------------
+  SECTION OUR-TEAM START */
+
+.our-team {
+    padding-bottom: 78px;
+}
+
+.our-team-text {
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 15px;
+    color: rgb(153, 153, 153);
+    line-height: 24px;
+    text-align: center;
+    padding: 0px 120px;
+    padding-bottom: 85px;
+}
+
+
+/*  OUR-TEAM LIST START  */
+
+.our-team-list {
+    margin: 0px;
+    padding-left: 0px;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.our-team-item {
+    position: relative;
+    height: 545px;
+}
+
+.our-team-item-background {
+    width: 380px;
+    height: 470px;
+    background-color: rgb(149, 225, 211);
+}
+
+.our-team-item-name {
+    margin: 0px;
+    padding-top: 28px;
+    font-size: 14px;
+    color: rgb(51, 51, 51);
+    text-transform: uppercase;
+    line-height: 17px;
+    text-align: center;
+}
+
+.our-team-item-profession {
+    margin: 0px;
+    padding-top: 7px;
+    font-size: 15px;
+    font-family: "Roboto", "Arial", sans-serif;
+    color: rgb(153, 153, 153);
+    font-style: italic;
+    font-weight: 300;
+    line-height: 24px;
+    text-align: center;
+}
+
+.our-team-item-background img {
+    transition: transform 0.2s linear;
+}
+
+.our-team-item:hover>.our-team-item-background img,
+.our-team-item:focus>.our-team-item-background img {
+    transform: translate(-10px, -10px);
+}
+
+.our-team-item:hover>.social-list,
+.our-team-item:focus>.social-list {
+    transform: translate(-10px, -10px);
+    opacity: 1;
+}
+
+
+/* SOCIAL-LIST START */
+
+.social-list {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 380px;
+    height: 470px;
+    position: absolute;
+    top: 0px;
+    background: linear-gradient(to top, rgba(252, 227, 138, 0.9), rgba(243, 129, 129, 0.9));
+    opacity: 0;
+    transition: opacity 0.2s linear, transform 0.2s linear;
+}
+
+.social-list li:not(:last-child) {
+    margin-right: 1px;
+}
+
+.social-item {
+    width: 56px;
+    height: 56px;
+}
+
+.social-item a {
+    display: block;
+    height: 56px;
+    background-color: #fce38a;
+    transition: background-color 0.2s linear;
+}
+
+.social-item:first-child a {
+    background-image: url(../img/facebook.png);
+}
+
+.social-item:nth-child(2) a {
+    background-image: url(../img/twitter.png);
+}
+
+.social-item:nth-child(3) a {
+    background-image: url(../img/pinterest.png);
+}
+
+.social-item:last-child a {
+    background-image: url(../img/instagram.png);
+}
+
+.social-item a:hover,
+.social-item a:focus {
+    background-color: #95e1d3;
+}
+
+
+/*  SOCIAL-LIST FINISH     
+  SECTION OUR-TEAM FINISH  
+        MAIN FINISH        
+---------------------------
