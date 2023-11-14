@@ -1,0 +1,29 @@
+.car{
+    width:150px;
+    height:150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+}
+.car:first-child{
+    /* background-color: rgba(0, 0, 100, 0.3); */
+}
+.car:hover{
+    border: 1px solid;
+    cursor: pointer;
+    background-color: rgba(0, 0, 100, 0.1);
+}
+
+.cars{
+    width:600px;
+    margin:0 auto;
+    display: flex;
+    justify-content: center;
+}
+.selected{
+    background-color: rgba(0, 0, 100, 0.3);
+}
+.main_p{
+    text-align: center;
+}
