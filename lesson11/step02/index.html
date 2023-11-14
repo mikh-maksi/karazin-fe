@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id ="slct">
+        <option value="">Виберіть щось</option>
+        <option value="1">Варіант 1</option>
+        <option value="2">Варіант 2</option>
+        <option value="3">Варіант 3</option>
+      </select>
+    <script>
+        s = document.getElementById("slct");
+        s.addEventListener("change",slct_fnc);
+        function slct_fnc(){
+                alert(s.value);
+
+        }
+    </script>
+</body>
+</html>
