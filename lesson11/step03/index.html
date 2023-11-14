@@ -8,18 +8,17 @@
 </head>
 <body>
     <div class="cars">
-    <div class="car" id="car1">
-    <img src="img/car48.png" alt="">
-</div>
-<div class="car" id="car2">
-    <img src="img/car64.png" alt="">
-</div>    
-<div class="car" id="car3"> 
-    <img src="img/car128.png" alt="">
-    
-</div>
-</div>
-<p class = "main_p">Викиди: <span id = "res"></span></p>
+        <div class="car" id="car1">
+            <img src="img/car48.png" alt="">
+        </div>
+        <div class="car" id="car2">
+            <img src="img/car64.png" alt="">
+        </div>    
+        <div class="car" id="car3"> 
+            <img src="img/car128.png" alt="">
+        </div>
+    </div>
+    <p class = "main_p">Викиди: <span id = "res"></span></p>
 <script>
     c1 = document.getElementById("car1");
     c2 = document.getElementById("car2");
@@ -32,11 +31,11 @@
     c3.addEventListener("click",fnc_c3);
 
     function fnc_c1(){
-        // c1.classList.remove("foo");
         c1.classList.add("selected");
         if (c2.classList.contains("selected")) {
             c2.classList.remove("selected");
         }
+        
         if (c3.classList.contains("selected")) {
             c3.classList.remove("selected");
         }        
