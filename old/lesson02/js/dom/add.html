@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="inpt1">A:</label><input type="text" id = "inpt1" name = "inpt1"><br>
+    <label for="inpt2">B:</label><input type="text" id = "inpt2" name = "inpt2"><br>
+
+    <button id = "btn">Get data</button>
+    <p id = "result"></p>
+    <script>
+        let inpt1 = document.getElementById("inpt1");
+        let inpt2 = document.getElementById("inpt2");
+        let btn = document.getElementById("btn"); 
+        let result = document.getElementById("result"); 
+
+        btn.addEventListener("click",f);
+
+        function f(){
+            let data1 = Number(inpt1.value);
+            let data2 = Number(inpt2.value);
+            let res = data1 + data2;
+            // console.log(data);
+            result.innerHTML = res;
+        }
+        
+        
+    </script>
+</body>
+</html>
