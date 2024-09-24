@@ -13,14 +13,18 @@
 
         // console.log(t_day);
         let temperature = [];
+
         for(i=0;i<30;i+=1){
             let t_day = Math.floor(Math.random() * max)+min;
             temperature.push(t_day);
         }
-        console.log(temperature);
 
-        sum = 0;
-        q = 0;
+        console.log(temperature);
+        console.log(t_day);
+       
+        let sum = 0;
+        let q = 0;
+
         for(i=0;i<temperature.length;i+=1){
             if (i % 2 == 1){
                 console.log(i+1);
